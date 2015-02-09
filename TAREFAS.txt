@@ -1,0 +1,19 @@
+Tarefas, 26/08/2014
+
+*****************
+*** INICIADAS ***
+*****************
+* Avisar quando um arquivo será sobreescrito
+* Melhorar a disposição dos componentes do GUI
+
+******************
+*** CONCLUIDAS ***
+******************
+* Melhorias no controle. Controle agora é 
+  feito usando um simples pic16f628a.
+  Com todas as funções já feitas pelo antigo.
+  Só que mais rápido e mais simples.
+  Agora é póssivel monitorar a tensão no 
+  barramento DC, protegendo o meu circuito
+  de potência.
+

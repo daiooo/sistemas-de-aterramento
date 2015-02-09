@@ -1,0 +1,5 @@
+Ferramentas utilizadas:
+1 - Proteus 8.1
+2 - Eagle 7.2
+
+controle.pdsprj -> Proteus 8.1

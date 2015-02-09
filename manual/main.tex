@@ -1,0 +1,517 @@
+% FELIPE BANDEIRA DA SILVA
+%
+% MANUAL DO SOFTWARE DE SISTEMAS DE ATERRAMENTO
+% LAMOTRIZ 2013-2015
+% FORTALEZA-CE
+% UFC - UNIVERSIDADE FEDERAL DO CEARÁ
+
+\documentclass[a4paper, 10pt]{article}
+%\documentclass[paper=a4, fontsize=11pt]{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{schemabloc}
+\usetikzlibrary{circuits}
+
+\usepackage{float}
+
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{18pt}
+
+\title{Manual de Uso}
+\author{LAMOTRIZ}
+%\date{}
+
+
+\begin{document}
+
+\maketitle
+
+Objetivo: Apresentação dos aspectos gerais de funcionamento, manual de uso e 
+especificações técnicas.
+\footnote{Versão Manual 1.0}.
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\listoffigures
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descrição}
+
+O equipamento NOME, é capaz de analisar e identificar uma topologia desconhecida 
+de aterramento, por exemplo, 3 hastes em paralelo. 
+Para isto utiliza medições antigas para o processo de treinamento e 
+classificação. Este equipamento não é adequado para medição de 
+resistência de aterramento, resistividade do terreno ou detectar correntes 
+parasitas presentes no solo, para isto utilize um terrômetro adequado. 
+
+NomeEquipamento é apresentado na Figura \ref{fig_fonte}. Sendo composto pelos 
+seguintes itens:
+
+
+\begin{enumerate}
+    \item Fonte de Alta Tensão.
+    \item Computador.
+    \item Hastes Cobreadas.
+\end{enumerate}
+
+
+\begin{figure}[!h]
+        \caption{\label{fig_fonte}Itens principais do sistema. (1) - Fonte de Alta Tensão, (2) - Computador, (3) - Hastes cobreadas.}
+	    \begin{center}
+	        \includegraphics[scale=0.1]{../fotos/CAM00189.jpg}
+	    \end{center}
+\end{figure}
+
+O equipamento opera com nível de tensão elevado, portanto, cuidado no 
+manuseio do mesmo e durante o processo de identificação. Que demora de 
+1 a 5 minutos, dependendo do número de amostras desejadas.
+
+Para que o processo de identificação funcione corretamente é necessário 
+preservar os amostras feitas em diversos solos. Com isso, tome cuidado
+com o manuseio e armazenamento do computador utilizado nas medições em 
+campo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Conexões e Alimentação}
+
+A Figura \ref{fig_painel_frontal} apresenta a vista frontal da \textit{Fonte de Alta Tensão}.
+Mostrando os seguintes itens, 
+
+\begin{enumerate}
+    \item Borne Vermelho, ligar com a topologia de aterramento a ser identificada.
+    \item Borne Verde, ligar na haste de retorno.
+
+    %%%%%\item Borne Preto, EXPLICAR
+
+
+\end{enumerate}
+
+Os demais itens vistos, são para uso exclusivo no desenvolvimento do equipamento e não devem
+ser utilizados para os fins do usuário. 
+
+\textbf{OBS: A chave ON/OFF deve estar sempre na posição ON.} A posição \textit{OFF} deve ser 
+evita, podendo tornar os resultados não confiáveis. Exclusiva para o desenvolvimento
+em laboratório.
+
+\begin{figure}[!h]
+        \caption{\label{fig_painel_frontal} Vista do painel frontal, identificação dos conectores.}
+	    \begin{center}
+            \includegraphics[scale=0.1]{../fotos/painel_frontal.jpg}
+	    \end{center}
+\end{figure}
+
+%%\subsection{Conexão Modo 1}
+%%
+%%O processo de identificação pode ser feito de dois modos. O primeiro apresentado nesta seção é
+%%referente à não utilização do eletrodo de tensão. Exemplificado pela Figura \ref{fig_conexao_modo1}.
+%%\textbf{IMPORTANTE:} Este modo requer a correta localização da fase e neutro da linha de alimentação 
+%%para a Fonte. Informações mais detalhadas seção: \nameref{sec_alimentacao}.
+
+\subsection{Ligação da Haste Auxiliar e Malha de Terra}
+
+A Figura \ref{fig_conexao_modo1} exemplifica como deve ser feito a ligação das hastes 
+a fonte de alta tensão. 
+
+\begin{figure}[!h]
+        \caption{\label{fig_conexao_modo1}Conexão.}
+	    \begin{center}
+            \includegraphics[scale=1.2]{../fotos/conexoes/hastes_modo_1.pdf}
+	    \end{center}
+\end{figure}
+
+
+%%\subsection{Conexão Modo 2}
+%%
+%%Este modo utiliza de uma segunda haste para o processo de identificação de uma malha de 
+%%aterramento. Possuindo agora duas, que são nomeadas de: Haste Auxiliar-Central e Haste 
+%%Auxiliar-Retorno. Exemplificação Figura \ref{fig_conexao_modo2}.
+%%
+%%\begin{figure}[!ht]
+%%        \caption{\label{fig_conexao_modo2}Conexão Modo 2.}
+%%	    \begin{center}
+%%            \includegraphics[scale=1.2]{../fotos/conexoes/hastes_modo_2.pdf}
+%%	    \end{center}
+%%\end{figure}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Alimentação}
+\label{sec_alimentacao}
+
+
+%Para que a fonte opere corretamente é necessário duas condições. É necessário um 
+%ponto de energia que forneça uma tensão de aproximadamente 220 Volts. O segundo 
+%ponto e principal, a correta identificação da Fase na instalação.
+
+Para que a fonte opere corretamente é necessário que tensão de alimentação 
+forneça 220 Volts. Para o perfeito funcionamento é necessário a correta 
+identificação do Fase e Neutro da instalação. \textit{Omissão desta necessidade 
+pode provocar de erros na leitura a danos aos componentes internos da fonte de alta tensão.}
+
+\begin{figure}[!h]
+        \caption{\label{fig_vista_traseira_fonte} Vista traseira da fonte.}
+	    \begin{center}
+            \includegraphics[scale=0.08]{../fotos/fonte_alimentacao.jpg}
+	    \end{center}
+\end{figure}
+
+A Figura \ref{fig_vista_traseira_fonte} mostra a chave principal de ligar ou 
+desligar a Fonte, ao seu lado o conector fêmea para entrada da alimentação de 220V.
+Bem como a localização do Neutro e Fase do equipamento. 
+
+% 29 jan 15
+%\textbf{*****MUDARISSO***** A fase é identificada no conector como sendo, o pino inferior
+%visto de baixo para cima. ***APRESENTAR NA FIGURA***}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Instalação do Software}
+
+Para que o software funcione corretamente, são necessários os seguintes softwares
+na máquina a ser utilizada nos ensaios:
+
+\begin{enumerate}
+    \item Windows8
+    \item Python 2.7
+    \item PyQT 4
+    \item PyVisa
+    \item Matplotlib
+    \item Numpy
+    \item Scipy
+\end{enumerate}
+
+É disponibilizado para tanto, um instalar para todos estes software. Presente 
+na mídia física junto ao equipamento. 
+
+\textbf{Observação:} É necessário uma conexão com a internet para a correta 
+instalação das dependências, em especial do  \textit{pyvisa\footnote{Controle de Instrumentos com Python. Mais informações em http://pyvisa.readthedocs.org/en/master}}.
+
+
+\subsection{Passo a Passo da Instalação}
+
+O instalador para todos os softwares necessários é disponibilizado e um único
+binário. Bastando apenas para o usuário guiar a instalação. A Figura \ref{fig_iniciando_instalacao} apresenta visão inicial para os passos seguintes.
+
+\begin{figure}[!h]
+        \caption{\label{fig_iniciando_instalacao}Iniciando a instalação.}
+	    \begin{center}
+            \includegraphics[scale=0.7]{../fotos/instalacao/parte1_executando.pdf}
+	    \end{center}
+\end{figure}
+
+Uma vez executado o instalador, na segunda tela, é possível selecionar o componentes 
+que serão instalados, caso já não foram. São os principais \textit{Anaconda}, \textit{PyQT} e o software
+alvo do projeto de pesquisa. O \textit{Anaconda} contém as principais ferramentas para se
+trabalhar com o \textit{Python}, processamento de imagens e cálculo numérico. O \textit{PyQT} é 
+o \textit{GUI}\footnote{Interface Gráfica} utilizado para a construção da interface entre o usuário e por fim 
+o software para analisar e identificar uma topologia de aterramento. Passo este apresentado 
+na Figura \ref{fig_selecionando_componentes_externos}. 
+
+É recomendado a instalação  de todos os componentes presentes no instalador, como é 
+visto na Figura \ref{fig_selecionando_componentes_externos}. 
+
+\begin{figure}[!h]
+        \caption{\label{fig_selecionando_componentes_externos}Selecionando os componentes necessários.}
+	    \begin{center}
+            \includegraphics[scale=0.7]{../fotos/instalacao/parte2_selecionando_componentes.pdf}
+	    \end{center}
+\end{figure}
+
+Uma vez confirmado os componentes necessário, o processo, propriamente dito, de instalação 
+é iniciado. Em um determinado momento da instalação aparecerão na tela, outros dois instaladores. 
+São eles do \textit{Anaconda} e \textit{PyQt}, este devem ser guiados também pelo usuário.
+
+\begin{figure}[!h]
+    \caption{\label{fig_pyqt_antigo}Confirmando a desinstalação do \textit{PyQT} básico para a instalação do completo.}
+	    \begin{center}
+            \includegraphics[scale=0.6]{../fotos/instalacao/parte6_pyqt.pdf}
+	    \end{center}
+\end{figure}
+
+
+No momento da instalação do \textit{PyQT} aparece uma mensagem, Figura \ref{fig_pyqt_antigo},  informando que 
+já existe uma instalação na pasta do \textit{Anaconda}, no entanto esta é a instalação básica do \textit{PyQT}. 
+Confirme a desinstalação do componente e continue a instalação completa do \textit{PyQT}.
+
+
+%\begin{figure}[!ht]
+%        \caption{\label{fig_processo_inicial_instalacao}Processo inicial da instalação.}
+%	    \begin{center}
+%            \includegraphics[scale=0.6]{../fotos/instalacao/parte3_descompactando.pdf}
+%	    \end{center}
+%\end{figure}
+
+No final é criado um atalho chamado ``aterramento'' na área de trabalho.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Apresentação do Software}
+
+A Figura \ref{fig_tela_inicial} apresenta a tela inicial em modo tela cheia do \textit{software} Aterramento 1.0. 
+Com este \textit{software} é possível interagir totalmente com a fonte de alta tensão, sistema de aquisição de 
+tensão e corrente bem como analisar as amostrar e obter os resultados e plotagem de 
+gráficos armazenados na memória.
+
+\begin{figure}[!h]
+    \caption{\label{fig_tela_inicial}Tela Inicial do Aterramento 1.0.}
+	    \begin{center}
+            \includegraphics[scale=0.3]{../fotos/execucao/tela_inicial.png}
+	    \end{center}
+\end{figure}
+
+A interface é divida em partes. As principais são:
+
+\begin{itemize}
+    \item Entradas.
+    \item Ações.
+    \item Resultados.
+\end{itemize}
+
+Outras partes são referente a como deve ser feito a ligação dos fios e apresentação dos
+apoiadores e executores do projeto.
+
+\subsection{Entrada}
+
+A ``Entrada'' é responsável por controlar, o local onde os dados serão salvos. Dados estes que são
+obtidos a cada ação de identificação da topologia de aterramento. Para selecionar, isto é obrigatório, 
+área de trabalho clica-se no ``botão'' do lado direito superior. Abre-se então uma janela para 
+que seja selecionada a pasta de trabalho. 
+
+O número de amostra garante a confiabilidade na análise, em
+compensação, aumenta o tempo necessário para aquisição dos dados de tensão e corrente. O valor 30, 
+é recomendado e definido como padrão. 
+O tempo estimando para a coleta de uma única amostra, é de aproximadamente 5.6 segundos. 
+Portanto para uma coleta de 30 amostra é necessário aproximadamente 2.8 minutos. Podendo variar de 
+acordo com as especificações do computador utilizado.
+
+Armazenamento das amostra é feita utilizando a data atual, o nome do terreno e o arranjo esperado para 
+o mesmo. Valores estes que podem ser definidos ainda na ``Entrada'', podendo serem alterados a qualquer
+momento. 
+
+Em campo é bastante útil a visualização da onda reconhecida pelo sistema de aquisição, portanto para 
+que seja possível visualizá-la após o processo de analise. Marca-se a opção ``Plotar o transiente 
+após análise''.
+
+\subsection{Ações}
+
+A segunda parte ``Ações'' é responsável por dar inicio ao processo de identificação de uma topologia
+de aterramento. Esse processo consiste em acionar a fonte de alta tensão ``n'' vezes e capturar 
+os sinais de tensão e corrente. Após isto estes valores são salvos na memória, para então serem 
+classificados pelo software.
+
+\textbf{IMPORTANTE:} Este equipamento opera com níveis de tensão elevados, portanto ao clicar em 
+``Iniciar'' garanta que ninguém esteja perto das hastes ou da malha alvo da identificação. Não toque
+nos cabos e conectores da fonte.
+
+Uma vez iniciado o processo uma barra mostrará o progresso. Caso seja necessário é possível cancelar, 
+clicando no botão ``Cancelar'', sendo assim é pedido um tempo menor que 5 segundos para o cancelamento
+por completo.
+
+\subsection{Resultados}
+
+%Ao fim do processo de análise são apresentados os resultados para o usuário. São dois resultados, o 
+%primeiro apresenta o resultado aproximado encontrado pelo programa. O segundo apresenta o resultado 
+%exato, sendo este a resposta final para o usuário.
+
+Ao fim do processo de coleta de amostra e análise, é apresentado para o usuário o resultado. 
+Na campo ``Número exato'' é possível visualizar a topologia identificada. Com uma taxa de 
+acerto de aproximadamente $87 \%$.
+
+Apresenta-se também o tempo real que foi necessário para todo o ensaio. Tempo este que pode variar
+de computador a número de amostras escolhidas.
+
+\subsection{Terminal}
+
+Uma ferramento bastante útil é um terminal que é carregado na inicialização do software.
+
+\begin{figure}[!h]
+    \caption{\label{fig_terminal}Terminal útil para debug.}
+	    \begin{center}
+            \includegraphics[scale=0.3]{../fotos/execucao/terminal.pdf}
+	    \end{center}
+\end{figure}
+
+Não sendo necessário para o usuário final. Mensagens informando erros ou avisos
+foram colocadas no decorrer do programa, tornando o terminal uma ferramento bastante útil, 
+quando algo não estiver funcionando como deveria.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exemplo, Identificando um Malha de Terra}
+
+O Exemplo aqui abortado é referente a identificação de uma topologia de aterramento
+desconhecida até então.
+
+Todo o processo de identificação esta sujeito a erros portanto deve ser feito uma 
+interpretação do resultado quando apresentado.
+
+Antes de ligar a fonte de alta tensão a rede elétrica, certifique-se,
+
+\begin{enumerate}
+    \item Identifique corretamente a Fase e Neutro na linha de alimentação da fonte.
+    \item O cabo USB deve esta devidamente conectado a uma porta livre do computador.
+    \item Software responsável pela identificação esta devidamente inicializado e aguardando
+        os comandos do usuário.
+    \item As ligações com a malha de terra e haste auxiliar estão conforme o exemplo da Figura \ref{fig_ligacao_hastes}.
+
+\end{enumerate}
+
+\textit{A omissão do passo 1 mostrado acima, pode ocasionar de erros na leitura a 
+danos aos componentes internos da fonte de alta tensão.}
+
+\begin{figure}[H]
+        \caption{\label{fig_ligacao_hastes}Exemplo de Ligação}
+	    \begin{center}
+            \includegraphics[scale=1.2]{../fotos/conexoes/hastes.pdf}
+	    \end{center}
+\end{figure}
+
+O comprimento dos cabos é variável e dependente diretamente da disposição da fonte
+entre a alimentação da rede, haste auxiliar e malha de terra.
+
+Para que o \textit{Software} funcione corretamente é necessário selecionar uma 
+área de trabalho e se necessário a quantidade de amostras as serem feitas. 
+Para melhorar na identificação posterior de ensaios feitos é importante nomear 
+o terreno que foi feito o ensaio, bem como um rótulo para a malha de terra a ser 
+estudada. Como mostra a Figura \ref{fig_entrando_os_dados} .
+
+\begin{figure}[H]
+        \caption{\label{fig_entrando_os_dados}Dados de Entrada.}
+	    \begin{center}
+            \includegraphics[scale=0.4]{../fotos/execucao/selecionando_area_trabalho_2.png}
+	    \end{center}
+\end{figure}
+
+Após a entrada destas informações, inicie o ensaio clicando em ``INICIAR'', visto
+na Figura \ref{fig_iniciando_ensaio}.
+
+\begin{figure}[H]
+        \caption{\label{fig_iniciando_ensaio}Iniciando o Ensaio.}
+	    \begin{center}
+            \includegraphics[scale=0.4]{../fotos/execucao/iniciando_amostragem.png}
+	    \end{center}
+\end{figure}
+
+Depois de aproximadamente 3 minutos um resultado deve ser apresentando, um exemplo
+pode ser visto na Figura \ref{fig_ex_resultado}.
+
+\begin{figure}[H]
+        \caption{\label{fig_ex_resultado}Exemplo de Resultado.}
+	    \begin{center}
+            \includegraphics[scale=0.4]{../fotos/execucao/resultados.png}
+	    \end{center}
+\end{figure}
+
+
+Se caso seja necessário, em uma situação que o resultado pode não ser confiável, 
+é possível visualizar o gráfico da tensão e corrente das amostras. Para isto 
+é necessário confirmar a caixa ``Plotar o transiente após análise''.
+
+\begin{figure}[H]
+        \caption{\label{fig_plt_transiente}Plot do Transiente.}
+	    \begin{center}
+            \includegraphics[scale=0.4]{../fotos/execucao/plot_transiente.png}
+	    \end{center}
+\end{figure}
+
+
+É possível plotar o gráfico, em outro momento, navegando até a opção: Análise -
+Plotar Grafico - Plot V I transiente. Contida na barra de tarefas, localizada
+na parte superior do GUI.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Princípio de Funcionamento}
+
+Um dos principais objetivos na construção de uma malha de terra é a proteção da 
+vida humana, proteção dos equipamentos podendo também ser utilizada como 
+meio para configuração triângulo - estrela aterrado para transformadores 
+de distribuição ou de potência. Portanto constitui um item fundamental para 
+uma instalação elétrica. 
+
+Entretanto devido a falhas na execução do projeto, é possível que a quantidade
+de hastes não sejam colocadas em sua totalidade. Trazendo riscos para o 
+funcionamento do sistema, e levando a possíveis prejuízos fiscais para a 
+empresa contratante. Em outros casos é possível que exista uma falha na 
+conexão elétrica em algum ponto da malha.
+
+Este equipamento inovador é portanto uma solução a identificação de uma topologia
+de aterramento já construída é que necessita de uma verificação se foi corretamente
+executada ou se não existem falhas elétricas.
+
+Para o estudo de uma malha de terra quando submetida a uma descarga atmosférica 
+é Possível encontrar na literatura, modelos de circuitos elétricos, modelos 
+eletromagnéticos, linhas de transmissão entre outros. Em todos é possível notar 
+que os parâmetros mais majoritários são: solo e características das hastes. 
+Parâmetros estes que determinam, resposta da malha de terra. Portanto o objetivo
+deste equipamento é diferenciar as possíveis topologias de malha de terra. 
+
+Utilizando para isto \textit{Machine Learning} para o reconhecimento de padrões, 
+partindo de situação já conhecidas. Considerando para isto  
+
+\begin{figure}[!h]
+        \caption{\label{fig_principio_funcionamento}Principio de Funcionamento do Sistema.}
+	    \begin{center}
+            \includegraphics[scale=0.5]{esquema_de_ligacao.pdf}
+	    \end{center}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Especificações Técnicas}
+
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Aplicação                & \begin{tabular}[c]{@{}l@{}}Analisar e identificar um topologia desconhecida \\ de aterramento. Fornecendo a disposição/topologia das \\ hastes em um aterramento até então desconhecido.\end{tabular}                          \\ \hline
+Método de  identificação & \begin{tabular}[c]{@{}l@{}}É injetado no solo uma tensão elétrica, mede-se \\ o sinal de tensão e corrente resultante. \\ Com isto analisa-se por meio de algorítimos\\ inteligentes qual a topologia.\end{tabular} \\ \hline
+Precisão                 & Aproximadamente 90\%.                                                                                                                                                                                               \\ \hline
+Alimentação              & Rede de 220V ~ 60Hz, linha monofásica sem terra.                                                                                                                                                                    \\ \hline
+Porta de Comunicação     & USB                                                                                                                                                                                                                 \\ \hline
+Peso                     & 20 kg, sem a presença do computador.                                                                                                                                                                                \\ \hline
+Temperatura de Operação  & 20ºC a 50ºC                                                                                                                                                                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\end{document}

@@ -1,0 +1,384 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+end_init CODE 0 10 10 1 2
+reset_vec CODE 0 0 0 1 2
+config CONFIG 0 2007 2007 1 2
+$dist/default/production\p16.production.obj
+cinit CODE 0 11 11 5 2
+intentry CODE 0 4 4 C 2
+text6 CODE 0 16 16 43 2
+text5 CODE 0 E9 E9 A 2
+text4 CODE 0 C7 C7 15 2
+text3 CODE 0 DC DC D 2
+text2 CODE 0 94 94 33 2
+text1 CODE 0 F3 F3 7 2
+maintext CODE 0 59 59 3B 2
+cstackBANK0 BANK0 1 20 20 5 1
+cstackCOMMON COMMON 1 70 70 5 1
+bssCOMMON COMMON 1 75 75 3 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0025-006F 1
+BANK1 00A0-00EF 1
+BANK2 0120-014F 1
+CODE 0001-0003 2
+CODE 00FA-07FF 2
+COMMON 0078-007D 1
+CONST 0001-0003 2
+CONST 00FA-07FF 2
+EEDATA 2100-217F 2
+ENTRY 0001-0003 2
+ENTRY 00FA-07FF 2
+IDLOC 2000-2003 2
+RAM 0025-006F 1
+RAM 00A0-00EF 1
+RAM 0120-014F 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-011F 1
+SFR3 0180-01EF 1
+STACK 00A0-00EF 1
+STRCODE 0001-0003 2
+STRCODE 00FA-07FF 2
+STRING 0001-0003 2
+STRING 00FA-07FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\p16.production.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.32\include\pic16f628a.h":1538 0 text0 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":211 4 intentry CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":195 11 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":198 11 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":211 11 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":212 12 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":213 13 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":219 14 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":220 14 cinit CODE
+"C:\Users\LABTER~1\AppData\Local\Temp\s7c4.":221 15 cinit CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":211 16 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":214 16 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":216 18 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":218 1A text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":221 22 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":224 24 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":225 26 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":226 2C text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":227 2F text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":228 30 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":229 34 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":230 35 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":231 3B text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":232 3E text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":233 3F text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":236 40 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":237 41 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":240 47 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":242 48 text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":246 4B text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":252 4C text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":255 4D text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":257 4E text6 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":262 59 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":264 59 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":265 5F maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":266 60 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":267 68 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":268 6B maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":269 6C maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":270 73 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":275 74 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":278 75 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":281 76 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":285 79 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":286 7A maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":287 7E maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":290 81 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":291 82 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":292 8F maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":294 92 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":295 92 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":294 93 maintext CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":119 94 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":121 94 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":122 9A text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":125 9E text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":126 A4 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":128 A5 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":129 A6 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":130 AF text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":131 B2 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":132 B7 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":133 BA text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":134 C3 text2 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":167 C7 text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":168 C7 text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":169 CA text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":174 CB text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":176 CE text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":177 CF text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":179 D3 text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":181 D4 text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":182 D7 text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":183 DA text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":184 DB text4 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":194 DC text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":195 DC text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":196 DF text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":198 E0 text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":202 E2 text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":204 E6 text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":205 E7 text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":206 E8 text3 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":154 E9 text5 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":155 E9 text5 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":156 EC text5 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":157 ED text5 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":159 EE text5 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":160 F2 text5 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":145 F3 text1 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":146 F3 text1 CODE
+"C:\sistemasAterramento\git\agilent\p16\main.c":147 F7 text1 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__end_of_monitor_fase 1F4 0 CODE 0 text1 dist/default/production\p16.production.obj
+_RB2 32 0 ABS 0 - dist/default/production\p16.production.obj
+_RB3 33 0 ABS 0 - dist/default/production\p16.production.obj
+_RA4 2C 0 ABS 0 - dist/default/production\p16.production.obj
+_RB4 34 0 ABS 0 - dist/default/production\p16.production.obj
+_RB5 35 0 ABS 0 - dist/default/production\p16.production.obj
+_RA6 2E 0 ABS 0 - dist/default/production\p16.production.obj
+_RB6 36 0 ABS 0 - dist/default/production\p16.production.obj
+__S0 2008 0 ABS 0 - -
+__S1 78 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_GIE 5F 0 ABS 0 - dist/default/production\p16.production.obj
+__Hintentry 20 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\p16.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production\p16.production.obj
+_isr 2C 0 CODE 0 text6 dist/default/production\p16.production.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production\p16.production.obj
+_TMR0 1 0 ABS 0 - dist/default/production\p16.production.obj
+_T0IF 5A 0 ABS 0 - dist/default/production\p16.production.obj
+_CMIF 66 0 ABS 0 - dist/default/production\p16.production.obj
+_flag 77 0 COMMON 1 bssCOMMON dist/default/production\p16.production.obj
+_main B2 0 CODE 0 maintext dist/default/production\p16.production.obj
+___sp 0 0 STACK 2 stack C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+btemp 7E 0 ABS 0 - dist/default/production\p16.production.obj
+ltemp 7E 0 ABS 0 - dist/default/production\p16.production.obj
+ttemp 7E 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp 7E 0 ABS 0 - dist/default/production\p16.production.obj
+start 20 0 CODE 0 init C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+ltemp0 7E 0 ABS 0 - dist/default/production\p16.production.obj
+ttemp0 7E 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp0 7E 0 ABS 0 - dist/default/production\p16.production.obj
+ltemp1 82 0 ABS 0 - dist/default/production\p16.production.obj
+ttemp1 81 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp1 80 0 ABS 0 - dist/default/production\p16.production.obj
+ltemp2 86 0 ABS 0 - dist/default/production\p16.production.obj
+_C1INV FC 0 ABS 0 - dist/default/production\p16.production.obj
+ttemp2 84 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp2 82 0 ABS 0 - dist/default/production\p16.production.obj
+ltemp3 80 0 ABS 0 - dist/default/production\p16.production.obj
+ttemp3 87 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp3 84 0 ABS 0 - dist/default/production\p16.production.obj
+ttemp4 7F 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp4 86 0 ABS 0 - dist/default/production\p16.production.obj
+_C1OUT FE 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp5 88 0 ABS 0 - dist/default/production\p16.production.obj
+wtemp6 7F 0 ABS 0 - dist/default/production\p16.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/default/production\p16.production.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__size_of_isr 0 0 ABS 0 - dist/default/production\p16.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+_PIE1bits 8C 0 ABS 0 - dist/default/production\p16.production.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_PIR1bits C 0 ABS 0 - dist/default/production\p16.production.obj
+__size_of_monitor_fase 0 0 ABS 0 - dist/default/production\p16.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__size_of_controle_mosfet 0 0 ABS 0 - dist/default/production\p16.production.obj
+__Lsfr3 0 0 ABS 0 sfr3 -
+__end_of_conf_ao_barra 1B8 0 CODE 0 text4 dist/default/production\p16.production.obj
+_controle_mosfet 128 0 CODE 0 text2 dist/default/production\p16.production.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__end_of_conf_mod_ref 1E6 0 CODE 0 text5 dist/default/production\p16.production.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\p16.production.obj
+stacklo 0 0 ABS 0 - C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+saved_w 7E 0 ABS 0 - dist/default/production\p16.production.obj
+__Hinit 20 0 CODE 0 init -
+__Linit 20 0 CODE 0 init -
+__end_of_main 128 0 CODE 0 maintext dist/default/production\p16.production.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 28 0 CODE 0 cinit dist/default/production\p16.production.obj
+_TRISAbits 85 0 ABS 0 - dist/default/production\p16.production.obj
+_TRISBbits 86 0 ABS 0 - dist/default/production\p16.production.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+_CMCONbits 1F 0 ABS 0 - dist/default/production\p16.production.obj
+_VRCONbits 9F 0 ABS 0 - dist/default/production\p16.production.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Lbank3 0 0 BANK3 1 bank3 -
+___latbits 0 0 ABS 0 - dist/default/production\p16.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext0 0 0 CODE 0 text0 dist/default/production\p16.production.obj
+__ptext1 1E6 0 CODE 0 text1 dist/default/production\p16.production.obj
+__ptext2 128 0 CODE 0 text2 dist/default/production\p16.production.obj
+__ptext3 1B8 0 CODE 0 text3 dist/default/production\p16.production.obj
+__ptext4 18E 0 CODE 0 text4 dist/default/production\p16.production.obj
+__ptext5 1D2 0 CODE 0 text5 dist/default/production\p16.production.obj
+__ptext6 2C 0 CODE 0 text6 dist/default/production\p16.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of__initialization 28 0 CODE 0 cinit dist/default/production\p16.production.obj
+__end_of_conf_timer0 1D2 0 CODE 0 text3 dist/default/production\p16.production.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 2008 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__end_of_isr B2 0 CODE 0 text6 dist/default/production\p16.production.obj
+__Hspace_1 78 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__size_of_conf_timer0 0 0 ABS 0 - dist/default/production\p16.production.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 2C 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+_conf_ao_barra 18E 0 CODE 0 text4 dist/default/production\p16.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\p16.production.obj
+_conf_mod_ref 1D2 0 CODE 0 text5 dist/default/production\p16.production.obj
+isr@tempo1 75 0 COMMON 1 bssCOMMON dist/default/production\p16.production.obj
+__size_of_conf_ao_barra 0 0 ABS 0 - dist/default/production\p16.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbssCOMMON 75 0 COMMON 1 bssCOMMON dist/default/production\p16.production.obj
+_INTCONbits B 0 ABS 0 - dist/default/production\p16.production.obj
+_conf_timer0 1B8 0 CODE 0 text3 dist/default/production\p16.production.obj
+__Hend_init 22 0 CODE 0 end_init -
+__Lend_init 20 0 CODE 0 end_init -
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\p16.production.obj
+intlevel1 0 0 CODE 0 functab C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+intlevel2 0 0 CODE 0 functab C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+__size_of_conf_mod_ref 0 0 ABS 0 - dist/default/production\p16.production.obj
+intlevel3 0 0 CODE 0 functab C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+intlevel4 0 0 CODE 0 functab C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+intlevel5 0 0 CODE 0 functab C:\Users\LABTER~1\AppData\Local\Temp\s7c4.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\p16.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\p16.production.obj
+start_initialization 22 0 CODE 0 cinit dist/default/production\p16.production.obj
+__end_of_controle_mosfet 18E 0 CODE 0 text2 dist/default/production\p16.production.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext B2 0 CODE 0 maintext dist/default/production\p16.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\p16.production.obj
+_monitor_fase 1E6 0 CODE 0 text1 dist/default/production\p16.production.obj
+_OPTION_REGbits 81 0 ABS 0 - dist/default/production\p16.production.obj
+__CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/production\p16.production.obj
+__initialization 22 0 CODE 0 cinit dist/default/production\p16.production.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production\p16.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\p16.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+intentry 0 4 8 F6 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 8 1
+cstackBANK0 1 20 20 5 1

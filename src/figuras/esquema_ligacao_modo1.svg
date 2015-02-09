@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="6cm" height="7cm" viewBox="176 177 106 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #ff0000" cx="210" cy="190.5" rx="11" ry="11.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #ff0000" cx="210" cy="190.5" rx="11" ry="11.5"/>
+  </g>
+  <g>
+    <ellipse style="fill: #00ff00" cx="270" cy="190.5" rx="11" ry="11.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #00ff00" cx="270" cy="190.5" rx="11" ry="11.5"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 6; stroke: #000000" x1="240" y1="241" x2="241" y2="304"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 6; stroke: #000000" x1="220" y1="241" x2="221" y2="304"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 6; stroke: #000000" x1="200" y1="241" x2="201" y2="304"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 6; stroke: #000000" x1="180" y1="241" x2="181" y2="304"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="180" y1="241" x2="240" y2="241"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 6; stroke: #000000" x1="271" y1="241" x2="271" y2="281"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="210" y1="202" x2="210" y2="241"/>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="270" y1="202" x2="271" y2="252.75"/>
+</svg>

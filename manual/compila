@@ -1,0 +1,24 @@
+#! /bin/sh
+# FELIPE BANDEIRA
+
+pdflatex main
+bibtex main
+pdflatex main
+pdflatex main
+
+#lualatex main
+#bibtex main
+#lualatex main
+#lualatex main
+
+rm *.aux
+rm *.bbl
+rm *.blg
+rm *.log
+rm *.out
+rm *.toc
+rm *.lof
+rm *.brf
+rm *.idx
+rm *.lot
+

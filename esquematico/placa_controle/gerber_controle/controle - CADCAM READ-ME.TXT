@@ -1,0 +1,47 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'controle.pdsprj'.
+CADCAM generated at 10:18:32 on terça-feira, 16 de dezembro de 2014.
+
+File List
+---------
+Top Copper              : controle - CADCAM Top Copper.TXT
+Bottom Copper           : controle - CADCAM Bottom Copper.TXT
+Top Silk Screen         : controle - CADCAM Top Silk Screen.TXT
+Bottom Silk Screen      : controle - CADCAM Bottom Silk Screen.TXT
+Mechanical 1            : controle - CADCAM Mechanical 1.TXT
+Drill                   : controle - CADCAM Drill.TXT
+
+Photoplotter Setup
+------------------
+Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer
+
+D10	CIRCLE  D=1mm                                                             DRAW
+D11	CIRCLE  D=0.3mm                                                           DRAW
+D12	CIRCLE  D=3mm                                                             FLASH
+D13	CIRCLE  D=2mm                                                             FLASH
+D14	SQUARE  S=2mm                                                             FLASH
+D15	CIRCLE  D=1.5mm                                                           FLASH
+D16	SQUARE  S=2.03mm                                                          FLASH
+D17	CIRCLE  D=2.29mm                                                          FLASH
+D18	CIRCLE  D=0.2mm                                                           DRAW
+D19	CIRCLE  D=1.02mm                                                          DRAW
+D70	CIRCLE  D=0.76mm                                                          DRAW
+D71	CIRCLE  D=0.64mm                                                          DRAW
+D20	CIRCLE  D=0.51mm                                                          DRAW
+D21	CIRCLE  D=0.0635mm                                                        DRAW
+
+NC Drill Setup
+--------------
+Format: ASCII, 2.4, imperial, absolute, eob=<CR><LF>, no zero suppression.
+Notes:  Tool sizes are diameters. Layer sets are in brackets - 0=TOP, 15=BOTTOM, 1-14=INNER.
+
+T01	1mm (0-15)
+T02	1.02mm (0-15)
+
+
+[END OF FILE]

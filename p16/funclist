@@ -1,0 +1,9 @@
+_monitor_fase: CODE, 243 0 7
+_conf_ao_barra: CODE, 199 0 21
+_conf_mod_ref: CODE, 233 0 10
+_main: CODE, 89 0 59
+__initialization: CODE, 17 0 3
+_conf_timer0: CODE, 220 0 13
+_isr: CODE, 22 0 67
+_controle_mosfet: CODE, 148 0 51
+Total: 231
