@@ -56,40 +56,39 @@ especificações técnicas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Descrição}
 
-O equipamento NOME, é capaz de analisar e identificar uma topologia desconhecida 
-de aterramento, por exemplo, 3 hastes em paralelo. 
+O equipamento é capaz de analisar o número de hastes
+(eletrodos de aterramento) para a topologia de aterramento
+de hastes em linha reta (paralelo), por exemplo, 3 hastes em paralelo. 
 Para isto utiliza medições antigas para o processo de treinamento e 
 classificação. Este equipamento não é adequado para medição de 
 resistência de aterramento, resistividade do terreno ou detectar correntes 
 parasitas presentes no solo, para isto utilize um terrômetro adequado. 
 
-NomeEquipamento é apresentado na Figura \ref{fig_fonte}. Sendo composto pelos 
+O equipamento é apresentado na Figura \ref{fig_fonte}. Sendo composto pelos 
 seguintes itens:
 
 
 \begin{enumerate}
-    \item Fonte de Alta Tensão.
+    \item Gerador/fonte de impulso de alta tensão.
     \item Computador.
-    \item Hastes Cobreadas.
 \end{enumerate}
 
 
 \begin{figure}[!h]
-        \caption{\label{fig_fonte}Itens principais do sistema. (1) - Fonte de Alta Tensão, (2) - Computador, (3) - Hastes cobreadas.}
+        \caption{\label{fig_fonte}Itens principais do sistema. (1) - Fonte de Alta Tensão, (2) - Computador}
 	    \begin{center}
 	        \includegraphics[scale=0.1]{../fotos/CAM00189.jpg}
 	    \end{center}
 \end{figure}
 
 O equipamento opera com nível de tensão elevado, portanto, cuidado no 
-manuseio do mesmo e durante o processo de identificação. Que demora de 
+manuseio do mesmo e durante o processo de identificação. Que demora em
+média
 1 a 5 minutos, dependendo do número de amostras desejadas.
 
-Para que o processo de identificação funcione corretamente é necessário 
-preservar os amostras feitas em diversos solos. Com isso, tome cuidado
-com o manuseio e armazenamento do computador utilizado nas medições em 
-campo.
-
+Cuidado com o manuseio do computador levado em campo, especialmente 
+no disco rígido. Nele contém os dados das amostras feitas que futuramente
+são utilizadas para melhorias no software de identificação. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,23 +96,21 @@ campo.
 
 \section{Conexões e Alimentação}
 
-A Figura \ref{fig_painel_frontal} apresenta a vista frontal da \textit{Fonte de Alta Tensão}.
+A Figura \ref{fig_painel_frontal} apresenta a vista frontal da \textit{Gerador de 
+impulso de alta tensão}.
 Mostrando os seguintes itens, 
 
 \begin{enumerate}
-    \item Borne Vermelho, ligar com a topologia de aterramento a ser identificada.
-    \item Borne Verde, ligar na haste de retorno.
-
+    \item Borne Vermelho, deve-se conectar o cabo que está fixado no 
+        ponto de inspeção do sistema de aterramento a ser identificado.
     %%%%%\item Borne Preto, EXPLICAR
-
-
 \end{enumerate}
 
 Os demais itens vistos, são para uso exclusivo no desenvolvimento do equipamento e não devem
 ser utilizados para os fins do usuário. 
 
 \textbf{OBS: A chave ON/OFF deve estar sempre na posição ON.} A posição \textit{OFF} deve ser 
-evita, podendo tornar os resultados não confiáveis. Exclusiva para o desenvolvimento
+evitada, podendo tornar os resultados não confiáveis. Exclusiva para o desenvolvimento
 em laboratório.
 
 \begin{figure}[!h]
@@ -172,9 +169,9 @@ a fonte de alta tensão.
 %ponto e principal, a correta identificação da Fase na instalação.
 
 Para que a fonte opere corretamente é necessário que tensão de alimentação 
-forneça 220 Volts. Para o perfeito funcionamento é necessário a correta 
-identificação do Fase e Neutro da instalação. \textit{Omissão desta necessidade 
-pode provocar de erros na leitura a danos aos componentes internos da fonte de alta tensão.}
+forneça uma tensão de 220 Volts. Para o perfeito funcionamento é necessário a correta 
+identificação dos pinos de Fase e Neutro da instalação. \textit{Omissão desta necessidade 
+pode provocar de erros na leitura a danos aos componentes internos da fonte de impulso.}
 
 \begin{figure}[!h]
         \caption{\label{fig_vista_traseira_fonte} Vista traseira da fonte.}
@@ -184,7 +181,7 @@ pode provocar de erros na leitura a danos aos componentes internos da fonte de a
 \end{figure}
 
 A Figura \ref{fig_vista_traseira_fonte} mostra a chave principal de ligar ou 
-desligar a Fonte, ao seu lado o conector fêmea para entrada da alimentação de 220V.
+desligar o gerador de impulso, ao seu lado o conector fêmea para entrada da alimentação de 220V.
 Bem como a localização do Neutro e Fase do equipamento. 
 
 % 29 jan 15
@@ -211,7 +208,7 @@ na máquina a ser utilizada nos ensaios:
     \item Scipy
 \end{enumerate}
 
-É disponibilizado para tanto, um instalar para todos estes software. Presente 
+É disponibilizado para tanto, um instalador para todos estes software. Presente 
 na mídia física junto ao equipamento. 
 
 \textbf{Observação:} É necessário uma conexão com a internet para a correta 
@@ -281,7 +278,7 @@ No final é criado um atalho chamado ``aterramento'' na área de trabalho.
 \section{Apresentação do Software}
 
 A Figura \ref{fig_tela_inicial} apresenta a tela inicial em modo tela cheia do \textit{software} Aterramento 1.0. 
-Com este \textit{software} é possível interagir totalmente com a fonte de alta tensão, sistema de aquisição de 
+Com este \textit{software} é possível interagir totalmente com a fonte de impulso, sistema de aquisição de 
 tensão e corrente bem como analisar as amostrar e obter os resultados e plotagem de 
 gráficos armazenados na memória.
 
@@ -305,30 +302,36 @@ apoiadores e executores do projeto.
 
 \subsection{Entrada}
 
-A ``Entrada'' é responsável por controlar, o local onde os dados serão salvos. Dados estes que são
-obtidos a cada ação de identificação da topologia de aterramento. Para selecionar, isto é obrigatório, 
-área de trabalho clica-se no ``botão'' do lado direito superior. Abre-se então uma janela para 
-que seja selecionada a pasta de trabalho. 
+Antes de iniciar o processo de análise, são necessárias algumas configurações
+iniciais. O primeiro passo é definir onde serão salvos os dados das amostras, 
+isto é feito selecionando uma ``área de trabalho''. 
+Clicando no ``botão'' a lado da referência ``área de trabalho''.
+Ao fazer isto abre-se uma janela para selecionar uma pasta que 
+servirá para tal propósito.
+
+
+
+
 
 O número de amostra garante a confiabilidade na análise, em
 compensação, aumenta o tempo necessário para aquisição dos dados de tensão e corrente. O valor 30, 
-é recomendado e definido como padrão. 
-O tempo estimando para a coleta de uma única amostra, é de aproximadamente 5.6 segundos. 
-Portanto para uma coleta de 30 amostra é necessário aproximadamente 2.8 minutos. Podendo variar de 
+é recomendado e foi definido como padrão. 
+O tempo estimando para a coleta de uma única amostra, é de aproximadamente 5,6 segundos. 
+Portanto para uma coleta de 30 amostra é necessário aproximadamente 2,8 minutos. Podendo variar de 
 acordo com as especificações do computador utilizado.
 
-Armazenamento das amostra é feita utilizando a data atual, o nome do terreno e o arranjo esperado para 
+O armazenamento das amostra é feito utilizando a data atual, o nome do terreno e o arranjo esperado para 
 o mesmo. Valores estes que podem ser definidos ainda na ``Entrada'', podendo serem alterados a qualquer
 momento. 
 
 Em campo é bastante útil a visualização da onda reconhecida pelo sistema de aquisição, portanto para 
-que seja possível visualizá-la após o processo de analise. Marca-se a opção ``Plotar o transiente 
+que seja possível visualizá-la após o processo de análise. Marca-se a opção ``Plotar o transiente 
 após análise''.
 
 \subsection{Ações}
 
 A segunda parte ``Ações'' é responsável por dar inicio ao processo de identificação de uma topologia
-de aterramento. Esse processo consiste em acionar a fonte de alta tensão ``n'' vezes e capturar 
+de aterramento. Esse processo consiste em acionar a fonte de impulso ``n'' vezes e capturar 
 os sinais de tensão e corrente. Após isto estes valores são salvos na memória, para então serem 
 classificados pelo software.
 
@@ -351,7 +354,7 @@ Na campo ``Número exato'' é possível visualizar a topologia identificada. Com
 acerto de aproximadamente $87 \%$.
 
 Apresenta-se também o tempo real que foi necessário para todo o ensaio. Tempo este que pode variar
-de computador a número de amostras escolhidas.
+de configurações do computador  ao número de amostras escolhidas.
 
 \subsection{Terminal}
 
@@ -365,7 +368,7 @@ Uma ferramento bastante útil é um terminal que é carregado na inicialização
 \end{figure}
 
 Não sendo necessário para o usuário final. Mensagens informando erros ou avisos
-foram colocadas no decorrer do programa, tornando o terminal uma ferramento bastante útil, 
+foram colocadas no decorrer do programa, tornando o terminal uma ferramenta bastante útil, 
 quando algo não estiver funcionando como deveria.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
