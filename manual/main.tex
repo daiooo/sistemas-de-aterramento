@@ -351,7 +351,7 @@ por completo.
 
 Ao fim do processo de coleta de amostra e análise, é apresentado para o usuário o resultado. 
 Na campo ``Número exato'' é possível visualizar a topologia identificada. Com uma taxa de 
-acerto de aproximadamente $87 \%$.
+acerto de aproximadamente $92 \%$.
 
 Apresenta-se também o tempo real que foi necessário para todo o ensaio. Tempo este que pode variar
 de configurações do computador  ao número de amostras escolhidas.
@@ -452,9 +452,9 @@ Se caso seja necessário, em uma situação que o resultado pode não ser confi�
 
 É possível plotar o gráfico, em outro momento, navegando até a opção:
 
-Análise $\rightarrow$ Plotar Grafico $\rightarrow$ Plot V I transiente. 
+Análise $\rightarrow$ Plotar Gráfico $\rightarrow$ Plot V I transiente. 
 
-Contida na barra de tarefas, localizada na parte superior do GUI.
+Contida na barra de tarefas, localizada na parte superior da janela principal.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -462,11 +462,11 @@ Contida na barra de tarefas, localizada na parte superior do GUI.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Princípio de Funcionamento}
 
-Um dos principais objetivos na construção de uma malha de terra é a proteção da 
-vida humana, proteção dos equipamentos podendo também ser utilizada como 
-meio para configuração triângulo - estrela aterrado para transformadores 
-de distribuição ou de potência. Portanto constitui um item fundamental para 
-uma instalação elétrica. 
+Um dos principais objetivos na construção de uma malha de terra é a 
+proteção da vida humana. Serve também para que os equipamentos de 
+proteção, por exemplo, de uma subestação funcionem corretamente como
+o pará-raio. Portanto a malha de terra é um item fundamental e 
+demanda cuidados do projeto, construção a utilização.
 
 Entretanto devido a falhas na execução do projeto, é possível que a quantidade
 de hastes não sejam colocadas em sua totalidade. Trazendo riscos para o 
@@ -485,15 +485,50 @@ que os parâmetros mais majoritários são: solo e características das hastes.
 Parâmetros estes que determinam, resposta da malha de terra. Portanto o objetivo
 deste equipamento é diferenciar as possíveis topologias de malha de terra. 
 
-Utilizando para isto \textit{Machine Learning} para o reconhecimento de padrões, 
-partindo de situação já conhecidas. Considerando para isto  
+Utilizando para isto uma Máquina de Aprendizado para o reconhecimento de padrões, 
+partindo de uma situação já conhecidas. O sistema é divido em quatro partes, 
+
+\begin{itemize}
+    \item Excitação.
+    \item Aquisição.
+    \item Extração das Características.
+    \item Reconhecimento dos Padrões.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Excitação}
+
+Para que o reconhecimento seja feito é necessário aplicar uma determinado pulso
+de tensão na topologia de aterramento. Responsabilidade do Gerador de Impulso
+de Tensão. 
 
 \begin{figure}[!h]
         \caption{\label{fig_principio_funcionamento}Principio de Funcionamento do Sistema.}
 	    \begin{center}
-            \includegraphics[scale=0.5]{esquema_de_ligacao.pdf}
+            \includegraphics[scale=0.5]{../fotos/principio/principio_de_funcionamento_corte.pdf}
 	    \end{center}
 \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Aquiiiição}
+
+O processo de aquisição consiste em, salvar as formas de onda de tensão e correntes
+lidas do ponto localizado na topologia de aterramento. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extração das Características}
+
+Busca-se das formas de onda de tensão e corrente características tipicas para 
+cada topologia, largura total da descarga, amplitude das componentes fundamentais
+da onda
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Reconhecimento dos Padrões}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
