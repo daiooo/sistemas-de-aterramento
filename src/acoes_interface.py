@@ -108,7 +108,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
             self.label_24.hide()
             self.label_29.hide()
 
-            self.label_17.setPixmap(QtGui.QPixmap(_fromUtf8("figuras/esquema_ligacao_modo1.svg")))
+            # nunca mais fazer isso
+            #self.label_17.setPixmap(QtGui.QPixmap(_fromUtf8("figuras/esquema_ligacao_modo1.svg")))
 
         '''
         Inicia as definições de cada ação, para cada componente do gui
