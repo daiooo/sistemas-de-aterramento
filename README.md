@@ -3,7 +3,7 @@ Sistemas de Aterramento
 
 Projeto: Sistemas de Aterramento
 
-Equipe:
+### Equipe:
 * Ricardo Thé
 * Tobias Fernandes
 * Rodrigo Paulino
