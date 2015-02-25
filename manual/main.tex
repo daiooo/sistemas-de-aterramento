@@ -184,8 +184,8 @@ desligar o gerador de impulso, ao seu lado o conector fêmea para entrada da ali
 Bem como a localização do Neutro e Fase do equipamento. 
 
 
-A exemplificação do esquema de ligação da alimentação é vista na Figura \ref{fig_esquema_ligacao_alimentacao}. Onde mostra duas vistas, vista frontal da fonte e vista
-traseira. Bem como a localização do neutro e fase da instalação e fonte de impulso.
+A exemplificação do esquema de ligação da alimentação é vista na Figura \ref{fig_esquema_ligacao_alimentacao}. Contendo duas vistas, vista frontal da fonte e vista
+traseira. Bem como, a localização do neutro e fase da instalação e fonte de impulso.
 
 \begin{figure}[!h]
         \caption{\label{fig_esquema_ligacao_alimentacao} Esquema de ligação da alimentação.}
@@ -205,8 +205,8 @@ traseira. Bem como a localização do neutro e fase da instalação e fonte de i
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Instalação do Software}
 
-Para que o software funcione corretamente, são necessários os seguintes softwares
-na máquina a ser utilizada nos ensaios:
+Para que o software de aterramento funcione corretamente, 
+são necessários os seguintes softwares na máquina a ser utilizada nos ensaios:
 
 \begin{enumerate}
     \item Windows8
@@ -508,9 +508,11 @@ partindo de uma situação já conhecidas. O sistema é divido em quatro partes,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Excitação}
 
-Para que o reconhecimento seja feito é necessário aplicar uma determinado pulso
-de tensão na topologia de aterramento. Responsabilidade do Gerador de Impulso
-de Tensão. 
+Para que o reconhecimento seja feito é necessário aplicar um determinado pulso
+de tensão na topologia de aterramento, até então desconhecido. 
+Sendo esta função de responsabilidade do Gerador de Impulso de Tensão. 
+Sendo apresentado na Figura \ref{fig_principio_funcionamento} e 
+anteriormente na Figura \ref{fig_fonte}.
 
 \begin{figure}[!h]
         \caption{\label{fig_principio_funcionamento}Principio de Funcionamento do Sistema.}
@@ -519,38 +521,80 @@ de Tensão.
 	    \end{center}
 \end{figure}
 
-Quando a malha de aterramento é projetada, não se leva em consideração 
-os efeitos da altas frequencias na malha. Pois uma malha estara
-submetida, na maiorias dos casos, a frequencia de operação da rede 
-elétrica 60 Hz. Uma vez da incidência de um raio as caractéricas 
-capacitivas e indutivas da malha irão surtir efeito.
+Sabe-se, quando a malha é submetida a frequência de 60 Hz os efeitos indutivos e 
+capacitivos da mesma são desprezíveis. Entrando ao aplicar um pulso de 
+alta tensão com uma constante de tempo pequena, constante que irá 
+depender diretamente das malha de terra. É possível extrair informações
+úteis. 
 
 A fonte de impulso é portanto o elemento que irá extrair a impedância
-caracteristica de cada malha, com a leitura de corrente e tensão. 
-Quando da descarga de um capacitor, carregado a aproximadamente 1000 V, 
-é feito na malha de aterramento.
+característica de cada malha, com a leitura de corrente e tensão. 
+Para isto é aplicado um pulso de tensão na malha, de aproximadamente
+1000 Volts. 
 
+A resposta é vista na figura \ref{fig_sinal}. 
+
+\begin{figure}[!h]
+    \caption{\label{fig_sinal} Sinal tipico da resposta.}
+	    \begin{center}
+            \includegraphics[scale=0.5]{../fotos/sinal/sinal-eps-converted-to.pdf}
+	    \end{center}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Aquisição}
 
 O processo de aquisição começa quando o pulso é disparado na topologia de aterramento.
-Mensurando e armazenando toda a leitura de tensão e corrente simultaneamente, a velocidade
-de 2MSa/s. Tal velocidade garante a maior número de pontos adquiridos, aumentando 
-assim a eficacia do resultado.
+Mensurando e armazenando toda a leitura de tensão e corrente simultaneamente, a um velocidade
+de 2MSa/s com resolução de 14 bits. 
+Tal velocidade garante a maior número de pontos adquiridos, 
+aumentando assim a eficacia do resultado.
 
+Ampliando o sinal armazenado é possível notar, em uma configuração exemplo, com 30
+amostras. A resposta para aquela topologia, sendo o inicio desta resposta a mais 
+importante. Isto acontece em aproximadamente 125 us em média.
+
+\begin{figure}[!h]
+    \caption{\label{fig_sinal} Sinal típico da resposta.}
+	    \begin{center}
+            \includegraphics[scale=0.5]{../fotos/sinal/sinal_detalhes-eps-converted-to.pdf}
+	    \end{center}
+\end{figure}
+
+O processo de aquisição consiste em adquirir tensão e corrente, tensão 
+que é aplicada na malha de aterramento e corrente que flui pela mesma. 
+Este processo é visto na Figura \ref{fig_ideia_aquisicao}. Onde utiliza-se
+o aterramento do lado de baixa tensão do transformador, como ponto de retorno
+de corrente e extremidade para sensor de tensão. Por isto é essencial a 
+correta ligação do fase e neutro da fonte de impulso visto do capítulo \ref{sec_alimentacao}
+e Figura \ref{fig_esquema_ligacao_alimentacao}.
+
+\textbf{OBS:} Portanto fica claro, é necessário que o lado de baixa tensão
+do transformador deve ser estrela aterrado. Se esta condição não for 
+satisfeita o processo de identificação de uma topologia de aterramento não 
+funcionará.
+
+\begin{figure}[!h]
+    \caption{\label{fig_ideia_aquisicao} Idealização da aquisição.}
+	    \begin{center}
+            \includegraphics[scale=0.4]{../fotos/sinal/trafo.png}
+	    \end{center}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Extração das Características}
 
-Busca-se das formas de onda de tensão e corrente características tipicas para 
-cada topologia, largura total da descarga, amplitude das componentes fundamentais
-da onda
+Busca-se das formas de onda de tensão e corrente características típicas para 
+cada topologia, aplicando FFT(\textit{Fast Fourier Transform}) a impedância 
+no domínio do tempo($t$) resultante $z_n=v_n(t)/i_n(t)$ para cada amostra ($n$).
+Obtendo assim os harmônicos do sinal. Também é levado em consideração
+o decaimento total da onda.
 
+Com isto é possível encontrar padrões para cada topologia de aterramento, independente
+do solo e condições climáticas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reconhecimento dos Padrões}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -568,7 +612,7 @@ Método de  identificação & \begin{tabular}[c]{@{}l@{}}É injetado no solo uma
 Precisão                 & Aproximadamente 90\%.                                                                                                                                                                                               \\ \hline
 Alimentação              & Rede de 220V ~ 60Hz, linha monofásica sem terra.                                                                                                                                                                    \\ \hline
 Porta de Comunicação     & USB                                                                                                                                                                                                                 \\ \hline
-Peso                     & 20 kg CHUTEEE, sem a presença do computador.                                                                                                                                                                                \\ \hline
+Peso                     & 30 Kg, sem a presença do computador.                                                                                                                                                                                \\ \hline
 Temperatura de Operação  & 20ºC a 50ºC                                                                                                                                                                                                         \\ \hline
 \end{tabular}
 \end{table}
