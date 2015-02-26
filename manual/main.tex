@@ -62,14 +62,14 @@ de hastes em linha reta (paralelo), por exemplo, 3 hastes em paralelo.
 Para isto utiliza medições antigas para o processo de treinamento e 
 classificação. Este equipamento não é adequado para medição de 
 resistência de aterramento, resistividade do terreno ou detectar correntes 
-parasitas presentes no solo, para isto utilize um terrômetro adequado. 
+parasitas presentes no solo, para isto utilize um terrômetro. 
 
 O equipamento é apresentado na Figura \ref{fig_fonte}. Sendo composto pelos 
 seguintes itens:
 
 
 \begin{enumerate}
-    \item Gerador/fonte de impulso de alta tensão.
+    \item Gerador/Fonte de impulso de alta tensão.
     \item Computador.
 \end{enumerate}
 
@@ -83,12 +83,11 @@ seguintes itens:
 
 O equipamento opera com nível de tensão elevado, portanto, cuidado no 
 manuseio do mesmo e durante o processo de identificação. Que demora em
-média
-1 a 5 minutos, dependendo do número de amostras desejadas.
+média de 1 a 5 minutos, dependendo do número de amostras desejadas.
 
 Cuidado com o manuseio do computador levado em campo, especialmente 
 no disco rígido. Nele contém os dados das amostras feitas que futuramente
-são utilizadas para melhorias no software de identificação. 
+são utilizadas para as melhorias no software de identificação. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,17 +95,18 @@ são utilizadas para melhorias no software de identificação.
 
 \section{Conexões e Alimentação}
 
-A Figura \ref{fig_painel_frontal} apresenta a vista frontal da \textit{Gerador de 
-impulso de alta tensão}.
+A Figura \ref{fig_painel_frontal} apresenta a vista frontal da Gerador de 
+Impulso de Alta Tensão.
 Mostrando os seguintes itens, 
 
 \begin{enumerate}
     \item Borne Vermelho, deve-se conectar o cabo que está fixado no 
         ponto de inspeção do sistema de aterramento a ser identificado.
-    %%%%%\item Borne Preto, EXPLICAR
+    \item Borne Verde, não utilizado.
+    \item Borne Preto, não utilizado
 \end{enumerate}
 
-Os demais itens vistos, são para uso exclusivo no desenvolvimento do equipamento e não devem
+Os demais itens vistos e, não comentados, são para uso exclusivo no desenvolvimento do equipamento. Não devem
 ser utilizados para os fins do usuário. 
 
 \textbf{OBS: A chave ON/OFF deve estar sempre na posição ON.} A posição \textit{OFF} deve ser 
@@ -130,10 +130,10 @@ em laboratório.
 \subsection{Ligação da Haste Auxiliar e Malha de Terra}
 
 A Figura \ref{fig_conexao_modo1} exemplifica como deve ser feito a ligação das hastes 
-a fonte de alta tensão. 
+ao Gerador de Impulso. 
 
 \begin{figure}[!h]
-        \caption{\label{fig_conexao_modo1}Conexão.}
+        \caption{\label{fig_conexao_modo1}Conexão gerador com a malha.}
 	    \begin{center}
             \includegraphics[scale=1.2]{../fotos/conexoes/hastes_modo_1.pdf}
 	    \end{center}
@@ -168,9 +168,9 @@ a fonte de alta tensão.
 %ponto de energia que forneça uma tensão de aproximadamente 220 Volts. O segundo 
 %ponto e principal, a correta identificação da Fase na instalação.
 
-Para que a fonte opere corretamente, é necessário que tensão de alimentação 
-forneça uma tensão de 220 Volts. Para o perfeito funcionamento é necessário a correta 
-identificação dos pinos de Fase e Neutro da instalação. \textit{Omissão desta necessidade 
+Para que a fonte opere corretamente, é necessário que a fonte de alimentação 
+forneça uma tensão de 220 Volts. Também é necessário a correta 
+identificação dos pinos de Fase e Neutro da instalação. \textbf{Omissão desta necessidade 
 pode provocar de erros na leitura a danos aos componentes internos da fonte de impulso.}
 
 \begin{figure}[!h]
@@ -227,7 +227,7 @@ instalação das dependências, em especial do  \textit{pyvisa\footnote{Controle
 
 \subsection{Passo a Passo da Instalação}
 
-O instalador para todos os softwares necessários é disponibilizado e um único
+O instalador para todos os softwares necessários é disponibilizado em um único
 binário. Bastando apenas para o usuário guiar a instalação. A Figura \ref{fig_iniciando_instalacao} apresenta visão inicial para os passos seguintes.
 
 \begin{figure}[!h]
@@ -340,7 +340,7 @@ após análise''.
 
 \subsection{Ações}
 
-A segunda parte ``Ações'' é responsável por dar inicio ao processo de identificação de uma topologia
+A segunda parte ``Ações'', é responsável por dar início ao processo de identificação de uma topologia
 de aterramento. Esse processo consiste em acionar a fonte de impulso ``n'' vezes e capturar 
 os sinais de tensão e corrente. Após isto estes valores são salvos na memória, para então serem 
 classificados pelo software.
@@ -368,7 +368,7 @@ de configurações do computador  ao número de amostras escolhidas.
 
 \subsection{Terminal}
 
-Uma ferramento bastante útil é um terminal que é carregado na inicialização do software.
+Uma ferramento bastante útil, é o terminal que carregado na inicialização do software.
 
 \begin{figure}[!h]
     \caption{\label{fig_terminal}Terminal útil para debug.}
@@ -377,7 +377,7 @@ Uma ferramento bastante útil é um terminal que é carregado na inicialização
 	    \end{center}
 \end{figure}
 
-Não sendo necessário para o usuário final. Mensagens informando erros ou avisos
+Não sendo fundamental para o usuário final. Mensagens informando erros ou avisos
 foram colocadas no decorrer do programa, tornando o terminal uma ferramenta bastante útil, 
 quando algo não estiver funcionando como deveria.
 
@@ -387,10 +387,13 @@ quando algo não estiver funcionando como deveria.
 \section{Exemplo, Identificando um Malha de Terra}
 
 O Exemplo aqui abortado é referente a identificação de uma topologia de aterramento
-desconhecida até então.
+desconhecida até então, ficando apenas no entendimento do processo necessário de 
+ligação ao acionamento do software.
 
 Todo o processo de identificação esta sujeito a erros portanto deve ser feito uma 
 interpretação do resultado quando apresentado.
+
+\subsection{Ligando a Fonte}
 
 Antes de ligar a fonte de alta tensão a rede elétrica, certifique-se,
 
@@ -399,12 +402,13 @@ Antes de ligar a fonte de alta tensão a rede elétrica, certifique-se,
     \item O cabo USB deve esta devidamente conectado a uma porta livre do computador.
     \item Software responsável pela identificação esta devidamente inicializado e aguardando
         os comandos do usuário.
-    \item As ligações com a malha de terra e haste auxiliar estão conforme o exemplo da Figura \ref{fig_ligacao_hastes}.
-
+    \item A ligação com a malha de terra. 
 \end{enumerate}
 
 \textit{A omissão do passo 1 mostrado acima, pode ocasionar de erros na leitura a 
 danos aos componentes internos da fonte de alta tensão.}
+
+Na Figura \ref{fig_ligacao_hastes} é possível visualizar todas as ligações necessárias.
 
 \begin{figure}[H]
         \caption{\label{fig_ligacao_hastes}Exemplo de Ligação}
@@ -413,6 +417,7 @@ danos aos componentes internos da fonte de alta tensão.}
 	    \end{center}
 \end{figure}
 
+\subsection{Preparando o Software}
 
 Para que o \textit{Software} funcione corretamente é necessário selecionar uma 
 área de trabalho e se necessário a quantidade de amostras as serem feitas. 
@@ -427,8 +432,13 @@ estudada. Como mostra a Figura \ref{fig_entrando_os_dados} .
 	    \end{center}
 \end{figure}
 
-Após a entrada destas informações, inicie o ensaio clicando em ``INICIAR'', visto
-na Figura \ref{fig_iniciando_ensaio}.
+Se caso necessário, em uma situação que o resultado pode não ser confiável, 
+é possível visualizar o gráfico da tensão e corrente das amostras. Para isto 
+é necessário confirmar a caixa ``Plotar o transiente após análise''.
+
+\subsection{Identificação e Resultados}
+
+Inicie o ensaio clicando em ``INICIAR'', visto na Figura \ref{fig_iniciando_ensaio}.
 
 \begin{figure}[H]
         \caption{\label{fig_iniciando_ensaio}Iniciando o Ensaio.}
@@ -448,9 +458,11 @@ pode ser visto na Figura \ref{fig_ex_resultado}.
 \end{figure}
 
 
-Se caso seja necessário, em uma situação que o resultado pode não ser confiável, 
-é possível visualizar o gráfico da tensão e corrente das amostras. Para isto 
-é necessário confirmar a caixa ``Plotar o transiente após análise''.
+É possível plotar o gráfico, em outro momento, navegando até a opção:
+
+Análise $\rightarrow$ Plotar Gráfico $\rightarrow$ Plot V I transiente. 
+
+Contida na barra de tarefas, localizada na parte superior da janela principal.
 
 \begin{figure}[H]
         \caption{\label{fig_plt_transiente}Plot do Transiente.}
@@ -460,11 +472,6 @@ Se caso seja necessário, em uma situação que o resultado pode não ser confi�
 \end{figure}
 
 
-É possível plotar o gráfico, em outro momento, navegando até a opção:
-
-Análise $\rightarrow$ Plotar Gráfico $\rightarrow$ Plot V I transiente. 
-
-Contida na barra de tarefas, localizada na parte superior da janela principal.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -552,10 +559,11 @@ aumentando assim a eficacia do resultado.
 
 Ampliando o sinal armazenado é possível notar, em uma configuração exemplo, com 30
 amostras. A resposta para aquela topologia, sendo o inicio desta resposta a mais 
-importante. Isto acontece em aproximadamente 125 us em média.
+importante. Isto acontece em aproximadamente 125 us em média. Como pode ser visto
+na Figura \ref{fig_sinal_detalhe}.
 
 \begin{figure}[!h]
-    \caption{\label{fig_sinal} Sinal típico da resposta.}
+    \caption{\label{fig_sinal_detalhe} Sinal ampliado no pico de tensão da resposta.}
 	    \begin{center}
             \includegraphics[scale=0.5]{../fotos/sinal/sinal_detalhes-eps-converted-to.pdf}
 	    \end{center}
@@ -590,13 +598,25 @@ no domínio do tempo($t$) resultante $z_n=v_n(t)/i_n(t)$ para cada amostra ($n$)
 Obtendo assim os harmônicos do sinal. Também é levado em consideração
 o decaimento total da onda.
 
-Com isto é possível encontrar padrões para cada topologia de aterramento, independente
-do solo e condições climáticas.
+%Com isto é possível encontrar padrões para cada topologia de aterramento, independente
+%do solo e condições climáticas.
+
+Com esta abordagem é possível encontrar padrões para cada topologia de aterramento, 
+independente do solo e condições climáticas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reconhecimento dos Padrões}
 
+Para o treinamento e classificação dos padrões são utilizados três classificadores
+diferente. Definidos por, quantidade baixa de amostras para os ensaios.
+São eles: AdaBoost, Modelos de Máquina de Vetor de Suporte e Árvores 
+Randomizadas. 
 
+\subsubsection{AdaBoost}
+
+\subsubsection{Máquina de Vetor de Suporte}
+
+\subsubsection{Árvores Randomizadas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
