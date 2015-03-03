@@ -525,7 +525,7 @@ Sendo apresentado na Figura \ref{fig_principio_funcionamento} e
 anteriormente na Figura \ref{fig_fonte}.
 
 \begin{figure}[!h]
-        \caption{\label{fig_principio_funcionamento}Principio de Funcionamento do Sistema.}
+        \caption{\label{fig_principio_funcionamento}Princípio de Funcionamento do Sistema.}
 	    \begin{center}
             \includegraphics[scale=0.3]{../fotos/principio/principio_de_funcionamento_corte.pdf}
 	    \end{center}
@@ -558,7 +558,7 @@ O processo de aquisição começa quando o pulso é disparado na topologia de at
 Mensurando e armazenando toda a leitura de tensão e corrente simultaneamente, a um velocidade
 de 2MSa/s com resolução de 14 bits. 
 Tal velocidade garante a maior número de pontos adquiridos, 
-aumentando assim a eficacia do resultado.
+aumentando assim a eficácia do resultado.
 
 Ampliando o sinal armazenado é possível notar, em uma configuração exemplo, com 30
 amostras. A resposta para aquela topologia, sendo o inicio desta resposta a mais 
@@ -581,7 +581,7 @@ correta ligação do fase e neutro da fonte de impulso visto do capítulo \ref{s
 e Figura \ref{fig_esquema_ligacao_alimentacao}.
 
 \textbf{OBS:} Portanto fica claro, é necessário que o lado de baixa tensão
-do transformador deve ser estrela aterrado. Se esta condição não for 
+do transformador deve ser \textbf{estrela aterrado}. Se está condição não for 
 satisfeita o processo de identificação de uma topologia de aterramento não 
 funcionará.
 
@@ -614,41 +614,84 @@ Durante o processo de desenvolvimento do projeto sistemas de
 aterramentos, três modelos foram utilizados para a classificação.
 São eles, AdaBoost (impulso ou estimulo adaptativo), Support 
 Vector Machine (máquina de vetor de suporte) e Random Forest
-(árvores randomizadas). Este três algorítimos deram respostas
-diferentes para os modelos em treinamento.
+(árvores randomizadas). 
 
+Para encontrar a taxa de acerto dos três modelos, foi utilizado
+26 ensaios. Com 25 ensaios usados para o treinamento e 1 para
+validação. Para ampliar o número de possibilidades 
+foi feito um jogo de rodadas para cada treino. Exemplificado 
+na Figura \ref{fig_treinamento}.
+
+\begin{figure}[!h]
+    \caption{\label{fig_treinamento}Processo de treinamento para as amostras.}
+	    \begin{center}
+            \includegraphics[scale=0.5]{../fotos/principio/rodizio.png}
+	    \end{center}
+\end{figure}
+
+Com a finalização do processo de treinamento, os três algorítimos 
+apresentaram diferentes taxas de acerto para as topologias estudadas.
+Como pode ser visto na tabela \ref{tab:modelo}. 
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[h]
+    \centering
+\caption{Taxa de acerto para os modelos AR, Adaboost e MSV}
 \begin{tabular}{|c|l|l|l|l|l|}
 \hline
-\multicolumn{1}{|l|}{AR} & \multicolumn{5}{l|}{Saída do Modelo Proposto} \\ \hline
-\multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \cline{2-6} 
- & 1 haste & 80,8 \% & 19,2 \% & 0 \% & 0 \% \\ \cline{2-6} 
- & 2 hastes & 23,0 \% & 69, 2 \% & 7,7 \% & 0 \% \\ \cline{2-6} 
- & 3 hastes & 7,7 \% & 0 \% & 65,4 \% & 26,9 \% \\ \cline{2-6} 
- & 4 hastes & 3,8 \% & 3,8 \% & 23,0 \% & 69,2 \% \\ \hline
+\textbf{AR} & \multicolumn{5}{c|}{Saída do Modelo Proposto} \\ \hline
+ &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \cline{2-6} 
+ & 1 haste & 100 \% & 0 \% & 0 \% & 0 \% \\ \cline{2-6} 
+ & 2 hastes & 2,9 \% & 97,1 \% & 0 \% & 0 \% \\ \cline{2-6} 
+ & 3 hastes & 0 \% & 2,9 \% & 97,1 \% & 0 \% \\ \cline{2-6} 
+\multirow{-5}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} & 4 hastes & 0 \% & 2,9 \% & 0 \% & 97,1 \% \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{97,9 \%}}} \\ \hline
+\textbf{Adaboost} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \hline
+ & 1 haste & 97,1 \% & 2,9 \% & 0 \% & 0 \% \\ \cline{2-6} 
+ & 2 hastes & 2,9 \% & 97,1 \% & 0 \% & 0 \% \\ \cline{2-6} 
+ & 3 hastes & 0 \% & 2,9 \% & 97.1 \% & 0 \% \\ \cline{2-6} 
+\multirow{-4}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} & 4 hastes & 0 \% & 2,9 \% & 2,9 \% & 94,3 \% \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{96,4 \%}}} \\ \hline
+\textbf{MSV} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \hline
+ & 1 haste & 97,1 \% & 2,0 \% & 0 \% & 0 \% \\ \cline{2-6} 
+ & 2 hastes & 0 \% & 97,1 \% & 2,9 \% & 0 \% \\ \cline{2-6} 
+ & 3 hastes & 0 \% & 0 \% & 97,1 \% & 2,9 \% \\ \cline{2-6} 
+\multirow{-4}{*}{\begin{tabular}[c]{@{}c@{}}Topologia \\ Real\end{tabular}} & 4 hastes & 0 \% & 0 \% & 0 \% & 100 \% \\ \hline
+\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{97,9 \%}}} \\ \hline
 \end{tabular}
+
+\label{tab:modelo}
 \end{table}
+
+Finalmente foi escolhido o modelo Árvores Randomizadas (AR), apresentando uma 
+taxa de $97,1 \%$ de acerto, equiparando-se com Máquina de Vetor de Suporte (MSV).
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 \section{Especificações Técnicas}
 
-
 \begin{table}[h]
+    \centering
+    \caption{Especificações Técnicas}
 \begin{tabular}{|l|l|}
 \hline
-Aplicação                & \begin{tabular}[c]{@{}l@{}}Analisar e identificar um topologia desconhecida \\ de aterramento. Fornecendo a disposição/topologia das \\ hastes em um aterramento até então desconhecido.\end{tabular}                          \\ \hline
-Método de  identificação & \begin{tabular}[c]{@{}l@{}}É injetado no solo uma tensão elétrica, mede-se \\ o sinal de tensão e corrente resultante. \\ Com isto analisa-se por meio de algorítimos\\ inteligentes qual a topologia.\end{tabular} \\ \hline
-Precisão                 & Aproximadamente 90\%.                                                                                                                                                                                               \\ \hline
-Alimentação              & Rede de 220V ~ 60Hz, linha monofásica sem terra.                                                                                                                                                                    \\ \hline
-Porta de Comunicação     & USB                                                                                                                                                                                                                 \\ \hline
-Peso                     & 30 Kg, sem a presença do computador.                                                                                                                                                                                \\ \hline
-Temperatura de Operação  & 20ºC a 50ºC                                                                                                                                                                                                         \\ \hline
+Aplicação & \begin{tabular}[c]{@{}l@{}}Analisar e identificar uma topologia desconhecida\\ de aterramento. Fornecendo a disposição/topologia\\ das hastes em um aterramento até então desconhecido\end{tabular} \\ \hline
+Método de  Identificação & \begin{tabular}[c]{@{}l@{}}É injetado no solo uma corrente elétrica, mede-se o\\ sinal de tensão e corrente resultante. Com isto analisa-se\\ por meio de algoritimos inteligentes qual topologia.\end{tabular} \\ \hline
+Precisão & Aproximadamente 90\% \\ \hline
+Alimentação & Rede de 220 V / 60 Hz \\ \hline
+Porta de Comunicação & USB 2.0 \\ \hline
+Peso & 30 Kg, sem a presença do computador \\ \hline
+Temperatura de Operação & 20ºC a 50ºC \\ \hline
 \end{tabular}
-\end{table}
 
+\label{tab:especificacoes}
+\end{table}
 
 
 \end{document}
