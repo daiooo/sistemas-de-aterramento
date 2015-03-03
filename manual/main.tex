@@ -22,6 +22,8 @@
 
 \usepackage{hyperref}
 
+\usepackage{multirow}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{18pt}
 
@@ -542,7 +544,7 @@ Para isto é aplicado um pulso de tensão na malha, de aproximadamente
 A resposta é vista na figura \ref{fig_sinal}. 
 
 \begin{figure}[!h]
-    \caption{\label{fig_sinal} Sinal tipico da resposta.}
+    \caption{\label{fig_sinal} Sinal típico da resposta.}
 	    \begin{center}
             \includegraphics[scale=0.5]{../fotos/sinal/sinal-eps-converted-to.pdf}
 	    \end{center}
@@ -607,16 +609,25 @@ independente do solo e condições climáticas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reconhecimento dos Padrões}
 
-Para o treinamento e classificação dos padrões são utilizados três classificadores
-diferente. Definidos por, quantidade baixa de amostras para os ensaios.
-São eles: AdaBoost, Modelos de Máquina de Vetor de Suporte e Árvores 
-Randomizadas. 
+Durante o processo de desenvolvimento do projeto sistemas de 
+aterramentos, três modelos foram utilizados para a classificação.
+São eles, AdaBoost (impulso ou estimulo adaptativo), Support 
+Vector Machine (máquina de vetor de suporte) e Random Forest
+(árvores randomizadas). Este três algorítimos deram respostas
+diferentes para os modelos em treinamento.
 
-\subsubsection{AdaBoost}
+\begin{table}[h]
+\begin{tabular}{|c|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|l|}{AR} & \multicolumn{5}{l|}{Saída do Modelo Proposto} \\ \hline
+\multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \cline{2-6} 
+ & 1 haste & 80,8 \% & 19,2 \% & 0 \% & 0 \% \\ \cline{2-6} 
+ & 2 hastes & 23,0 \% & 69, 2 \% & 7,7 \% & 0 \% \\ \cline{2-6} 
+ & 3 hastes & 7,7 \% & 0 \% & 65,4 \% & 26,9 \% \\ \cline{2-6} 
+ & 4 hastes & 3,8 \% & 3,8 \% & 23,0 \% & 69,2 \% \\ \hline
+\end{tabular}
+\end{table}
 
-\subsubsection{Máquina de Vetor de Suporte}
-
-\subsubsection{Árvores Randomizadas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
