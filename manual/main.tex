@@ -24,6 +24,8 @@
 
 \usepackage{multirow}
 
+\usepackage{lipsum}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{18pt}
 
@@ -223,6 +225,9 @@ são necessários os seguintes softwares na máquina a ser utilizada nos ensaios
 
 É disponibilizado para tanto, um instalador para todos estes software. Presente 
 na mídia física junto ao equipamento. 
+Existe ainda a possibilidade de baixar pelo link: 
+\url{https://www.dropbox.com/s/o8wal1l2ejuq56h/setup-sistemas-aterramento.24feb15.v1.exe?dl=0}
+%\hypertarget{https://www.dropbox.com/s/o8wal1l2ejuq56h/setup-sistemas-aterramento.24feb15.v1.exe?dl=0}{instalador}
 
 \textbf{Observação:} É necessário uma conexão com a internet para a correta 
 instalação das dependências, em especial do  \textit{pyvisa\footnote{Controle de Instrumentos com Python. Mais informações em http://pyvisa.readthedocs.org/en/master}}.
@@ -616,10 +621,10 @@ São eles, AdaBoost (impulso ou estimulo adaptativo), Support
 Vector Machine (máquina de vetor de suporte) e Random Forest
 (árvores randomizadas). 
 
-Para encontrar a taxa de acerto dos três modelos, foi utilizado
-26 ensaios. Com 25 ensaios usados para o treinamento e 1 para
-validação. Para ampliar o número de possibilidades 
-foi feito um jogo de rodadas para cada treino. Exemplificado 
+Para encontrar a taxa de acerto dos três modelos, foram utilizado
+26 ensaios. Em um rodizio de 26 rodadas, onde cada rodada contem 
+25 ensaios usados para o treinamento e 1 para
+validação. Exemplificado 
 na Figura \ref{fig_treinamento}.
 
 \begin{figure}[!h]
@@ -631,13 +636,19 @@ na Figura \ref{fig_treinamento}.
 
 Com a finalização do processo de treinamento, os três algorítimos 
 apresentaram diferentes taxas de acerto para as topologias estudadas.
-Como pode ser visto na tabela \ref{tab:modelo}. 
+Como pode ser visto na tabela \ref{tab:modelo}, para 
+os algoritmos AR(Árvores Randomizadas),  MSV(Máquina de Vetor de Suporte) e Adaboost.
+
+A tabela \ref{tab:modelo} apresenta as taxas de acerto, linha diagonal principal, 
+e as taxas de erros em comparação com o real. Para os três algoritmos escolhidos 
+é possível visualizar que, a taxa de acerto de AR é idêntica para MSV.
+
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage[table,xcdraw]{xcolor}
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[h]
+\begin{table}[!t]
     \centering
 \caption{Taxa de acerto para os modelos AR, Adaboost e MSV}
 \begin{tabular}{|c|l|l|l|l|l|}
@@ -666,14 +677,11 @@ Como pode ser visto na tabela \ref{tab:modelo}.
 \label{tab:modelo}
 \end{table}
 
-Finalmente foi escolhido o modelo Árvores Randomizadas (AR), apresentando uma 
-taxa de $97,1 \%$ de acerto, equiparando-se com Máquina de Vetor de Suporte (MSV).
-
-
-
+%\lipsum[1-2]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \section{Especificações Técnicas}
 
 \begin{table}[h]
