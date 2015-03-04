@@ -66,7 +66,7 @@ de hastes em linha reta (paralelo), por exemplo, 3 hastes em paralelo.
 Para isto utiliza medições antigas para o processo de treinamento e 
 classificação. Este equipamento não é adequado para medição de 
 resistência de aterramento, resistividade do terreno ou detectar correntes 
-parasitas presentes no solo, para isto utilize um terrômetro. 
+parasitas presentes no solo, para isto, utilize um terrômetro. 
 
 O equipamento é apresentado na Figura \ref{fig_fonte}. Sendo composto pelos 
 seguintes itens:
@@ -172,10 +172,10 @@ ao Gerador de Impulso.
 %ponto de energia que forneça uma tensão de aproximadamente 220 Volts. O segundo 
 %ponto e principal, a correta identificação da Fase na instalação.
 
-Para que a fonte opere corretamente, é necessário que a fonte de alimentação 
+Para que a Fonte de Impulso opere corretamente, é necessário que a fonte de alimentação 
 forneça uma tensão de 220 Volts. Também é necessário a correta 
 identificação dos pinos de Fase e Neutro da instalação. \textbf{Omissão desta necessidade 
-pode provocar de erros na leitura a danos aos componentes internos da fonte de impulso.}
+pode provocar de erros na leitura a danos aos componentes internos da Fonte de Impulso.}
 
 \begin{figure}[!h]
         \caption{\label{fig_vista_traseira_fonte} Vista traseira da fonte.}
@@ -183,7 +183,8 @@ pode provocar de erros na leitura a danos aos componentes internos da fonte de i
             \includegraphics[scale=0.08]{../fotos/fonte_alimentacao.jpg}
 	    \end{center}
 \end{figure}
-A Figura \ref{fig_vista_traseira_fonte} mostra a chave principal de ligar ou 
+
+A Figura \ref{fig_vista_traseira_fonte} mostra à chave principal de ligar ou 
 desligar o gerador de impulso, ao seu lado o conector fêmea para entrada da alimentação de 220V.
 Bem como a localização do Neutro e Fase do equipamento. 
 
@@ -225,10 +226,11 @@ são necessários os seguintes softwares na máquina a ser utilizada nos ensaios
 
 É disponibilizado para tanto, um instalador para todos estes software. Presente 
 na mídia física junto ao equipamento. 
-Existe ainda a possibilidade de baixar pelo link: 
+É possível baixar pelo link: 
+% copy
 \url{https://copy.com/2KwTthmf9Lqy6NU}
+% dropbox
 %\url{https://www.dropbox.com/s/o8wal1l2ejuq56h/setup-sistemas-aterramento.24feb15.v1.exe?dl=0}
-%\hypertarget{https://www.dropbox.com/s/o8wal1l2ejuq56h/setup-sistemas-aterramento.24feb15.v1.exe?dl=0}{instalador}
 
 \textbf{Observação:} É necessário uma conexão com a internet para a correta 
 instalação das dependências, em especial do  \textit{pyvisa\footnote{Controle de Instrumentos com Python. Mais informações em http://pyvisa.readthedocs.org/en/master}}.
@@ -254,7 +256,7 @@ o \textit{GUI}\footnote{Interface Gráfica} utilizado para a construção da int
 o software para analisar e identificar uma topologia de aterramento. Passo este apresentado 
 na Figura \ref{fig_selecionando_componentes_externos}. 
 
-É recomendado a instalação  de todos os componentes presentes no instalador, como é 
+É recomendado a instalação de todos os componentes presentes no instalador, como é 
 visto na Figura \ref{fig_selecionando_componentes_externos}. 
 
 \begin{figure}[!h]
@@ -324,12 +326,9 @@ apoiadores e executores do projeto.
 Antes de iniciar o processo de análise, são necessárias algumas configurações
 iniciais. O primeiro passo é definir onde serão salvos os dados das amostras, 
 isto é feito selecionando uma ``área de trabalho''. 
-Clicando no ``botão'' a lado da referência ``área de trabalho''.
+Clicando no ``botão'' ao lado da referência ``área de trabalho''.
 Ao fazer isto abre-se uma janela para selecionar uma pasta que 
 servirá para tal propósito.
-
-
-
 
 
 O número de amostra garante a confiabilidade na análise, em
@@ -343,7 +342,7 @@ O armazenamento das amostra é feito utilizando a data atual, o nome do terreno 
 o mesmo. Valores estes que podem ser definidos ainda na ``Entrada'', podendo serem alterados a qualquer
 momento. 
 
-Em campo é bastante útil a visualização da onda reconhecida pelo sistema de aquisição, portanto para 
+Em campo é bastante útil a visualização da onda adquirida pelo sistema de aquisição, portanto para 
 que seja possível visualizá-la após o processo de análise. Marca-se a opção ``Plotar o transiente 
 após análise''.
 
@@ -358,7 +357,7 @@ classificados pelo software.
 ``Iniciar'' garanta que ninguém esteja perto das hastes ou da malha alvo da identificação. Não toque
 nos cabos e conectores da fonte.
 
-Uma vez iniciado o processo uma barra mostrará o progresso. Caso seja necessário é possível cancelar, 
+Uma vez iniciado o processo uma barra mostrará o progresso. Caso seja necessário, é possível cancelar, 
 clicando no botão ``Cancelar'', sendo assim é pedido um tempo menor que 5 segundos para o cancelamento
 por completo.
 
@@ -373,7 +372,7 @@ Na campo ``Número exato'' é possível visualizar a topologia identificada. Com
 acerto de aproximadamente $92 \%$.
 
 Apresenta-se também o tempo real que foi necessário para todo o ensaio. Tempo este que pode variar
-de configurações do computador  ao número de amostras escolhidas.
+das configurações do computador  ao número de amostras escolhidas.
 
 \subsection{Terminal}
 
@@ -386,8 +385,8 @@ Uma ferramento bastante útil, é o terminal que carregado na inicialização do
 	    \end{center}
 \end{figure}
 
-Não sendo fundamental para o usuário final. Mensagens informando erros ou avisos
-foram colocadas no decorrer do programa, tornando o terminal uma ferramenta bastante útil, 
+Não sendo fundamental para o usuário final. No entanto, apresenta mensagens informando erros ou avisos,
+que foram colocadas no decorrer do programa, tornando o terminal uma ferramenta bastante útil, 
 quando algo não estiver funcionando como deveria.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -399,7 +398,7 @@ O Exemplo aqui abortado é referente a identificação de uma topologia de aterr
 desconhecida até então, ficando apenas no entendimento do processo necessário de 
 ligação ao acionamento do software.
 
-Todo o processo de identificação esta sujeito a erros portanto deve ser feito uma 
+Todo o processo de identificação esta sujeito a erros, portanto deve ser feito a 
 interpretação do resultado quando apresentado.
 
 \subsection{Ligando a Fonte}
@@ -429,9 +428,9 @@ Na Figura \ref{fig_ligacao_hastes} é possível visualizar todas as ligações n
 \subsection{Preparando o Software}
 
 Para que o \textit{Software} funcione corretamente é necessário selecionar uma 
-área de trabalho e se necessário a quantidade de amostras as serem feitas. 
+área de trabalho e se necessário, quantidade de amostras a serem feitas. 
 Para melhorar na identificação posterior de ensaios feitos é importante nomear 
-o terreno que foi feito o ensaio, bem como um rótulo para a malha de terra a ser 
+o terreno alvo do ensaio, bem como um rótulo para à malha de terra a ser 
 estudada. Como mostra a Figura \ref{fig_entrando_os_dados} .
 
 \begin{figure}[H]
@@ -505,21 +504,21 @@ de aterramento já construída é que necessita de uma verificação se foi corr
 executada ou se não existem falhas elétricas.
 
 Para o estudo de uma malha de terra quando submetida a uma descarga atmosférica 
-é Possível encontrar na literatura, modelos de circuitos elétricos, modelos 
-eletromagnéticos, linhas de transmissão entre outros. Em todos é possível notar 
+é possível encontrar na literatura, modelos de circuitos elétricos, modelos 
+eletromagnéticos, linhas de transmissão entre outros. Em todos é nota-se 
 que os parâmetros mais majoritários são: solo e características das hastes. 
-Parâmetros estes que determinam, resposta da malha de terra. Portanto o objetivo
+Parâmetros estes que determinam, resposta da malha de terra. Então o objetivo
 deste equipamento é diferenciar as possíveis topologias de malha de terra. 
 
-Utilizando para isto uma Máquina de Aprendizado para o reconhecimento de padrões, 
+Utilizando uma Máquina de Aprendizado para o reconhecimento de padrões, 
 partindo de uma situação já conhecidas. O sistema é divido em quatro partes, 
 
-\begin{itemize}
+\begin{enumerate}
     \item Excitação.
     \item Aquisição.
     \item Extração das Características.
     \item Reconhecimento dos Padrões.
-\end{itemize}
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Excitação}
@@ -563,11 +562,11 @@ A resposta é vista na figura \ref{fig_sinal}.
 O processo de aquisição começa quando o pulso é disparado na topologia de aterramento.
 Mensurando e armazenando toda a leitura de tensão e corrente simultaneamente, a um velocidade
 de 2MSa/s com resolução de 14 bits. 
-Tal velocidade garante a maior número de pontos adquiridos, 
+Tal velocidade garante a maior número de pontos adquiridos em um curto espaço de tempo, 
 aumentando assim a eficácia do resultado.
 
 Ampliando o sinal armazenado é possível notar, em uma configuração exemplo, com 30
-amostras. A resposta para aquela topologia, sendo o inicio desta resposta a mais 
+amostras. A resposta para aquela topologia, sendo o início desta resposta à mais 
 importante. Isto acontece em aproximadamente 125 us em média. Como pode ser visto
 na Figura \ref{fig_sinal_detalhe}.
 
@@ -587,7 +586,7 @@ correta ligação do fase e neutro da fonte de impulso visto do capítulo \ref{s
 e Figura \ref{fig_esquema_ligacao_alimentacao}.
 
 \textbf{OBS:} Portanto fica claro, é necessário que o lado de baixa tensão
-do transformador deve ser \textbf{estrela aterrado}. Se está condição não for 
+do transformador deva ser \textbf{estrela aterrado}. Se está condição não for 
 satisfeita o processo de identificação de uma topologia de aterramento não 
 funcionará.
 
