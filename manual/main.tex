@@ -485,202 +485,202 @@ Contida na barra de tarefas, localizada na parte superior da janela principal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Princípio de Funcionamento}
-
-Um dos principais objetivos na construção de uma malha de terra é a 
-proteção da vida humana. Serve também para que os equipamentos de 
-proteção, por exemplo, de uma subestação funcionem corretamente como
-o pará-raio. Portanto a malha de terra é um item fundamental e 
-demanda cuidados do projeto, construção a utilização.
-
-Entretanto devido a falhas na execução do projeto, é possível que a quantidade
-de hastes não sejam colocadas em sua totalidade. Trazendo riscos para o 
-funcionamento do sistema, e levando a possíveis prejuízos fiscais para a 
-empresa contratante. Em outros casos é possível que exista uma falha na 
-conexão elétrica em algum ponto da malha.
-
-Este equipamento inovador é portanto uma solução a identificação de uma topologia
-de aterramento já construída é que necessita de uma verificação se foi corretamente
-executada ou se não existem falhas elétricas.
-
-Para o estudo de uma malha de terra quando submetida a uma descarga atmosférica 
-é possível encontrar na literatura, modelos de circuitos elétricos, modelos 
-eletromagnéticos, linhas de transmissão entre outros. Em todos é nota-se 
-que os parâmetros mais majoritários são: solo e características das hastes. 
-Parâmetros estes que determinam, resposta da malha de terra. Então o objetivo
-deste equipamento é diferenciar as possíveis topologias de malha de terra. 
-
-Utilizando uma Máquina de Aprendizado para o reconhecimento de padrões, 
-partindo de uma situação já conhecidas. O sistema é divido em quatro partes, 
-
-\begin{enumerate}
-    \item Excitação.
-    \item Aquisição.
-    \item Extração das Características.
-    \item Reconhecimento dos Padrões.
-\end{enumerate}
-
+%\section{Princípio de Funcionamento}
+%
+%Um dos principais objetivos na construção de uma malha de terra é a 
+%proteção da vida humana. Serve também para que os equipamentos de 
+%proteção, por exemplo, de uma subestação funcionem corretamente como
+%o pará-raio. Portanto a malha de terra é um item fundamental e 
+%demanda cuidados do projeto, construção a utilização.
+%
+%Entretanto devido a falhas na execução do projeto, é possível que a quantidade
+%de hastes não sejam colocadas em sua totalidade. Trazendo riscos para o 
+%funcionamento do sistema, e levando a possíveis prejuízos fiscais para a 
+%empresa contratante. Em outros casos é possível que exista uma falha na 
+%conexão elétrica em algum ponto da malha.
+%
+%Este equipamento inovador é portanto uma solução a identificação de uma topologia
+%de aterramento já construída é que necessita de uma verificação se foi corretamente
+%executada ou se não existem falhas elétricas.
+%
+%Para o estudo de uma malha de terra quando submetida a uma descarga atmosférica 
+%é possível encontrar na literatura, modelos de circuitos elétricos, modelos 
+%eletromagnéticos, linhas de transmissão entre outros. Em todos é nota-se 
+%que os parâmetros mais majoritários são: solo e características das hastes. 
+%Parâmetros estes que determinam, resposta da malha de terra. Então o objetivo
+%deste equipamento é diferenciar as possíveis topologias de malha de terra. 
+%
+%Utilizando uma Máquina de Aprendizado para o reconhecimento de padrões, 
+%partindo de uma situação já conhecidas. O sistema é divido em quatro partes, 
+%
+%\begin{enumerate}
+%    \item Excitação.
+%    \item Aquisição.
+%    \item Extração das Características.
+%    \item Reconhecimento dos Padrões.
+%\end{enumerate}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Excitação}
-
-Para que o reconhecimento seja feito é necessário aplicar um determinado pulso
-de tensão na topologia de aterramento, até então desconhecido. 
-Sendo esta função de responsabilidade do Gerador de Impulso de Tensão. 
-Sendo apresentado na Figura \ref{fig_principio_funcionamento} e 
-anteriormente na Figura \ref{fig_fonte}.
-
-\begin{figure}[!h]
-        \caption{\label{fig_principio_funcionamento}Princípio de Funcionamento do Sistema.}
-	    \begin{center}
-            \includegraphics[scale=0.3]{../fotos/principio/principio_de_funcionamento_corte.pdf}
-	    \end{center}
-\end{figure}
-
-Sabe-se, quando a malha é submetida a frequência de 60 Hz os efeitos indutivos e 
-capacitivos da mesma são desprezíveis. Entrando ao aplicar um pulso de 
-alta tensão com uma constante de tempo pequena, constante que irá 
-depender diretamente das malha de terra. É possível extrair informações
-úteis. 
-
-A fonte de impulso é portanto o elemento que irá extrair a impedância
-característica de cada malha, com a leitura de corrente e tensão. 
-Para isto é aplicado um pulso de tensão na malha, de aproximadamente
-1000 Volts. 
-
-A resposta é vista na figura \ref{fig_sinal}. 
-
-\begin{figure}[!h]
-    \caption{\label{fig_sinal} Sinal típico da resposta.}
-	    \begin{center}
-            \includegraphics[scale=0.5]{../fotos/sinal/sinal-eps-converted-to.pdf}
-	    \end{center}
-\end{figure}
-
+%\subsection{Excitação}
+%
+%Para que o reconhecimento seja feito é necessário aplicar um determinado pulso
+%de tensão na topologia de aterramento, até então desconhecido. 
+%Sendo esta função de responsabilidade do Gerador de Impulso de Tensão. 
+%Sendo apresentado na Figura \ref{fig_principio_funcionamento} e 
+%anteriormente na Figura \ref{fig_fonte}.
+%
+%\begin{figure}[!h]
+%        \caption{\label{fig_principio_funcionamento}Princípio de Funcionamento do Sistema.}
+%	    \begin{center}
+%            \includegraphics[scale=0.3]{../fotos/principio/principio_de_funcionamento_corte.pdf}
+%	    \end{center}
+%\end{figure}
+%
+%Sabe-se, quando a malha é submetida a frequência de 60 Hz os efeitos indutivos e 
+%capacitivos da mesma são desprezíveis. Entrando ao aplicar um pulso de 
+%alta tensão com uma constante de tempo pequena, constante que irá 
+%depender diretamente das malha de terra. É possível extrair informações
+%úteis. 
+%
+%A fonte de impulso é portanto o elemento que irá extrair a impedância
+%característica de cada malha, com a leitura de corrente e tensão. 
+%Para isto é aplicado um pulso de tensão na malha, de aproximadamente
+%1000 Volts. 
+%
+%A resposta é vista na figura \ref{fig_sinal}. 
+%
+%\begin{figure}[!h]
+%    \caption{\label{fig_sinal} Sinal típico da resposta.}
+%	    \begin{center}
+%            \includegraphics[scale=0.5]{../fotos/sinal/sinal-eps-converted-to.pdf}
+%	    \end{center}
+%\end{figure}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Aquisição}
-
-O processo de aquisição começa quando o pulso é disparado na topologia de aterramento.
-Mensurando e armazenando toda a leitura de tensão e corrente simultaneamente, a um velocidade
-de 2MSa/s com resolução de 14 bits. 
-Tal velocidade garante a maior número de pontos adquiridos em um curto espaço de tempo, 
-aumentando assim a eficácia do resultado.
-
-Ampliando o sinal armazenado é possível notar, em uma configuração exemplo, com 30
-amostras. A resposta para aquela topologia, sendo o início desta resposta à mais 
-importante. Isto acontece em aproximadamente 125 us em média. Como pode ser visto
-na Figura \ref{fig_sinal_detalhe}.
-
-\begin{figure}[!h]
-    \caption{\label{fig_sinal_detalhe} Sinal ampliado no pico de tensão da resposta.}
-	    \begin{center}
-            \includegraphics[scale=0.5]{../fotos/sinal/sinal_detalhes-eps-converted-to.pdf}
-	    \end{center}
-\end{figure}
-
-O processo de aquisição consiste em adquirir tensão e corrente, tensão 
-que é aplicada na malha de aterramento e corrente que flui pela mesma. 
-Este processo é visto na Figura \ref{fig_ideia_aquisicao}. Onde utiliza-se
-o aterramento do lado de baixa tensão do transformador, como ponto de retorno
-de corrente e extremidade para sensor de tensão. Por isto é essencial a 
-correta ligação do fase e neutro da fonte de impulso visto do capítulo \ref{sec_alimentacao}
-e Figura \ref{fig_esquema_ligacao_alimentacao}.
-
-\textbf{OBS:} Portanto fica claro, é necessário que o lado de baixa tensão
-do transformador deva ser \textbf{estrela aterrado}. Se está condição não for 
-satisfeita o processo de identificação de uma topologia de aterramento não 
-funcionará.
-
-\begin{figure}[!h]
-    \caption{\label{fig_ideia_aquisicao} Idealização da aquisição.}
-	    \begin{center}
-            \includegraphics[scale=0.4]{../fotos/sinal/trafo.png}
-	    \end{center}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Extração das Características}
-
-Busca-se das formas de onda de tensão e corrente características típicas para 
-cada topologia, aplicando FFT(\textit{Fast Fourier Transform}) a impedância 
-no domínio do tempo($t$) resultante $z_n=v_n(t)/i_n(t)$ para cada amostra ($n$).
-Obtendo assim os harmônicos do sinal. Também é levado em consideração
-o decaimento total da onda.
-
-%Com isto é possível encontrar padrões para cada topologia de aterramento, independente
-%do solo e condições climáticas.
-
-Com esta abordagem é possível encontrar padrões para cada topologia de aterramento, 
-independente do solo e condições climáticas.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Reconhecimento dos Padrões}
-
-Durante o processo de desenvolvimento do projeto sistemas de 
-aterramentos, três modelos foram utilizados para a classificação.
-São eles, AdaBoost (impulso ou estimulo adaptativo), Support 
-Vector Machine (máquina de vetor de suporte) e Random Forest
-(árvores randomizadas). 
-
-Para encontrar a taxa de acerto dos três modelos, foram utilizado
-26 ensaios. Em um rodizio de 26 rodadas, onde cada rodada contem 
-25 ensaios usados para o treinamento e 1 para
-validação. Exemplificado 
-na Figura \ref{fig_treinamento}.
-
-\begin{figure}[!h]
-    \caption{\label{fig_treinamento}Processo de treinamento para as amostras.}
-	    \begin{center}
-            \includegraphics[scale=0.5]{../fotos/principio/rodizio.png}
-	    \end{center}
-\end{figure}
-
-Com a finalização do processo de treinamento, os três algorítimos 
-apresentaram diferentes taxas de acerto para as topologias estudadas.
-Como pode ser visto na tabela \ref{tab:modelo}, para 
-os algoritmos AR(Árvores Randomizadas),  MSV(Máquina de Vetor de Suporte) e Adaboost.
-
-A tabela \ref{tab:modelo} apresenta as taxas de acerto, linha diagonal principal, 
-e as taxas de erros em comparação com o real. Para os três algoritmos escolhidos 
-é possível visualizar que, a taxa de acerto de AR é idêntica para MSV.
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[!t]
-    \centering
-\caption{Taxa de acerto para os modelos AR, Adaboost e MSV}
-\begin{tabular}{|c|l|l|l|l|l|}
-\hline
-\textbf{AR} & \multicolumn{5}{c|}{Saída do Modelo Proposto} \\ \hline
- &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \cline{2-6} 
- & 1 haste & 100 \% & 0 \% & 0 \% & 0 \% \\ \cline{2-6} 
- & 2 hastes & 2,9 \% & 97,1 \% & 0 \% & 0 \% \\ \cline{2-6} 
- & 3 hastes & 0 \% & 2,9 \% & 97,1 \% & 0 \% \\ \cline{2-6} 
-\multirow{-5}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} & 4 hastes & 0 \% & 2,9 \% & 0 \% & 97,1 \% \\ \hline
-\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{97,9 \%}}} \\ \hline
-\textbf{Adaboost} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \hline
- & 1 haste & 97,1 \% & 2,9 \% & 0 \% & 0 \% \\ \cline{2-6} 
- & 2 hastes & 2,9 \% & 97,1 \% & 0 \% & 0 \% \\ \cline{2-6} 
- & 3 hastes & 0 \% & 2,9 \% & 97.1 \% & 0 \% \\ \cline{2-6} 
-\multirow{-4}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} & 4 hastes & 0 \% & 2,9 \% & 2,9 \% & 94,3 \% \\ \hline
-\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{96,4 \%}}} \\ \hline
-\textbf{MSV} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \hline
- & 1 haste & 97,1 \% & 2,0 \% & 0 \% & 0 \% \\ \cline{2-6} 
- & 2 hastes & 0 \% & 97,1 \% & 2,9 \% & 0 \% \\ \cline{2-6} 
- & 3 hastes & 0 \% & 0 \% & 97,1 \% & 2,9 \% \\ \cline{2-6} 
-\multirow{-4}{*}{\begin{tabular}[c]{@{}c@{}}Topologia \\ Real\end{tabular}} & 4 hastes & 0 \% & 0 \% & 0 \% & 100 \% \\ \hline
-\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{97,9 \%}}} \\ \hline
-\end{tabular}
-
-\label{tab:modelo}
-\end{table}
-
-%\lipsum[1-2]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Aquisição}
+%
+%O processo de aquisição começa quando o pulso é disparado na topologia de aterramento.
+%Mensurando e armazenando toda a leitura de tensão e corrente simultaneamente, a um velocidade
+%de 2MSa/s com resolução de 14 bits. 
+%Tal velocidade garante a maior número de pontos adquiridos em um curto espaço de tempo, 
+%aumentando assim a eficácia do resultado.
+%
+%Ampliando o sinal armazenado é possível notar, em uma configuração exemplo, com 30
+%amostras. A resposta para aquela topologia, sendo o início desta resposta à mais 
+%importante. Isto acontece em aproximadamente 125 us em média. Como pode ser visto
+%na Figura \ref{fig_sinal_detalhe}.
+%
+%\begin{figure}[!h]
+%    \caption{\label{fig_sinal_detalhe} Sinal ampliado no pico de tensão da resposta.}
+%	    \begin{center}
+%            \includegraphics[scale=0.5]{../fotos/sinal/sinal_detalhes-eps-converted-to.pdf}
+%	    \end{center}
+%\end{figure}
+%
+%O processo de aquisição consiste em adquirir tensão e corrente, tensão 
+%que é aplicada na malha de aterramento e corrente que flui pela mesma. 
+%Este processo é visto na Figura \ref{fig_ideia_aquisicao}. Onde utiliza-se
+%o aterramento do lado de baixa tensão do transformador, como ponto de retorno
+%de corrente e extremidade para sensor de tensão. Por isto é essencial a 
+%correta ligação do fase e neutro da fonte de impulso visto do capítulo \ref{sec_alimentacao}
+%e Figura \ref{fig_esquema_ligacao_alimentacao}.
+%
+%\textbf{OBS:} Portanto fica claro, é necessário que o lado de baixa tensão
+%do transformador deva ser \textbf{estrela aterrado}. Se está condição não for 
+%satisfeita o processo de identificação de uma topologia de aterramento não 
+%funcionará.
+%
+%\begin{figure}[!h]
+%    \caption{\label{fig_ideia_aquisicao} Idealização da aquisição.}
+%	    \begin{center}
+%            \includegraphics[scale=0.4]{../fotos/sinal/trafo.png}
+%	    \end{center}
+%\end{figure}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Extração das Características}
+%
+%Busca-se das formas de onda de tensão e corrente características típicas para 
+%cada topologia, aplicando FFT(\textit{Fast Fourier Transform}) a impedância 
+%no domínio do tempo($t$) resultante $z_n=v_n(t)/i_n(t)$ para cada amostra ($n$).
+%Obtendo assim os harmônicos do sinal. Também é levado em consideração
+%o decaimento total da onda.
+%
+%%Com isto é possível encontrar padrões para cada topologia de aterramento, independente
+%%do solo e condições climáticas.
+%
+%Com esta abordagem é possível encontrar padrões para cada topologia de aterramento, 
+%independente do solo e condições climáticas.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Reconhecimento dos Padrões}
+%
+%Durante o processo de desenvolvimento do projeto sistemas de 
+%aterramentos, três modelos foram utilizados para a classificação.
+%São eles, AdaBoost (impulso ou estimulo adaptativo), Support 
+%Vector Machine (máquina de vetor de suporte) e Random Forest
+%(árvores randomizadas). 
+%
+%Para encontrar a taxa de acerto dos três modelos, foram utilizado
+%26 ensaios. Em um rodizio de 26 rodadas, onde cada rodada contem 
+%25 ensaios usados para o treinamento e 1 para
+%validação. Exemplificado 
+%na Figura \ref{fig_treinamento}.
+%
+%\begin{figure}[!h]
+%    \caption{\label{fig_treinamento}Processo de treinamento para as amostras.}
+%	    \begin{center}
+%            \includegraphics[scale=0.5]{../fotos/principio/rodizio.png}
+%	    \end{center}
+%\end{figure}
+%
+%Com a finalização do processo de treinamento, os três algorítimos 
+%apresentaram diferentes taxas de acerto para as topologias estudadas.
+%Como pode ser visto na tabela \ref{tab:modelo}, para 
+%os algoritmos AR(Árvores Randomizadas),  MSV(Máquina de Vetor de Suporte) e Adaboost.
+%
+%A tabela \ref{tab:modelo} apresenta as taxas de acerto, linha diagonal principal, 
+%e as taxas de erros em comparação com o real. Para os três algoritmos escolhidos 
+%é possível visualizar que, a taxa de acerto de AR é idêntica para MSV.
+%
+%
+%% Please add the following required packages to your document preamble:
+%% \usepackage{multirow}
+%% \usepackage[table,xcdraw]{xcolor}
+%% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+%\begin{table}[!t]
+%    \centering
+%\caption{Taxa de acerto para os modelos AR, Adaboost e MSV}
+%\begin{tabular}{|c|l|l|l|l|l|}
+%\hline
+%\textbf{AR} & \multicolumn{5}{c|}{Saída do Modelo Proposto} \\ \hline
+% &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \cline{2-6} 
+% & 1 haste & 100 \% & 0 \% & 0 \% & 0 \% \\ \cline{2-6} 
+% & 2 hastes & 2,9 \% & 97,1 \% & 0 \% & 0 \% \\ \cline{2-6} 
+% & 3 hastes & 0 \% & 2,9 \% & 97,1 \% & 0 \% \\ \cline{2-6} 
+%\multirow{-5}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} & 4 hastes & 0 \% & 2,9 \% & 0 \% & 97,1 \% \\ \hline
+%\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{97,9 \%}}} \\ \hline
+%\textbf{Adaboost} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \hline
+% & 1 haste & 97,1 \% & 2,9 \% & 0 \% & 0 \% \\ \cline{2-6} 
+% & 2 hastes & 2,9 \% & 97,1 \% & 0 \% & 0 \% \\ \cline{2-6} 
+% & 3 hastes & 0 \% & 2,9 \% & 97.1 \% & 0 \% \\ \cline{2-6} 
+%\multirow{-4}{*}{\begin{tabular}[c]{@{}c@{}}Topologia\\ Real\end{tabular}} & 4 hastes & 0 \% & 2,9 \% & 2,9 \% & 94,3 \% \\ \hline
+%\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{96,4 \%}}} \\ \hline
+%\textbf{MSV} &  & 1 haste & 2 hastes & 3 hastes & 4 hastes \\ \hline
+% & 1 haste & 97,1 \% & 2,0 \% & 0 \% & 0 \% \\ \cline{2-6} 
+% & 2 hastes & 0 \% & 97,1 \% & 2,9 \% & 0 \% \\ \cline{2-6} 
+% & 3 hastes & 0 \% & 0 \% & 97,1 \% & 2,9 \% \\ \cline{2-6} 
+%\multirow{-4}{*}{\begin{tabular}[c]{@{}c@{}}Topologia \\ Real\end{tabular}} & 4 hastes & 0 \% & 0 \% & 0 \% & 100 \% \\ \hline
+%\multicolumn{1}{|l|}{\begin{tabular}[c]{@{}l@{}}Taxa de \\ Acerto\end{tabular}} & \multicolumn{5}{c|}{{\color[HTML]{9A0000} \textbf{97,9 \%}}} \\ \hline
+%\end{tabular}
+%
+%\label{tab:modelo}
+%\end{table}
+%
+%%\lipsum[1-2]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Especificações Técnicas}
 
@@ -691,10 +691,10 @@ e as taxas de erros em comparação com o real. Para os três algoritmos escolhi
 \hline
 Aplicação & \begin{tabular}[c]{@{}l@{}}Analisar e identificar uma topologia desconhecida\\ de aterramento. Fornecendo a disposição/topologia\\ das hastes em um aterramento até então desconhecido\end{tabular} \\ \hline
 Método de  Identificação & \begin{tabular}[c]{@{}l@{}}É injetado no solo uma corrente elétrica, mede-se o\\ sinal de tensão e corrente resultante. Com isto analisa-se\\ por meio de algoritimos inteligentes qual topologia.\end{tabular} \\ \hline
-Precisão & Aproximadamente 90\% \\ \hline
+Precisão & Aproximadamente 98\% \\ \hline
 Alimentação & Rede de 220 V / 60 Hz \\ \hline
 Porta de Comunicação & USB 2.0 \\ \hline
-Peso & 30 Kg, sem a presença do computador \\ \hline
+Peso & 18 Kg, sem a presença do computador \\ \hline
 Temperatura de Operação & 20ºC a 50ºC \\ \hline
 \end{tabular}
 
