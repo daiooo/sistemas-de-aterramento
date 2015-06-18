@@ -4,7 +4,7 @@ LABCENTER PROTEUS TOOL INFORMATION FILE
 In case of difficulty, please e-mail support@labcenter.co.uk
 
 Tool set up for Proteus layout 'potencia.pdsprj'.
-CADCAM generated at 09:40:45 on quinta-feira, 18 de junho de 2015.
+CADCAM generated at 10:48:33 on quinta-feira, 18 de junho de 2015.
 
 File List
 ---------
@@ -23,10 +23,12 @@ Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer
 
 D10	RECT    W=118.1th             H=78.7th                                    FLASH
 D11	CIRCLE  D=118.1th                                                         FLASH
-D12	CIRCLE  D=8th                                                             DRAW
-D13	CIRCLE  D=80th                                                            DRAW
-D14	RECT    W=138.1th             H=98.7th                                    FLASH
-D15	CIRCLE  D=138.1th                                                         FLASH
+D12	CIRCLE  D=78.7th                                                          FLASH
+D13	CIRCLE  D=8th                                                             DRAW
+D14	CIRCLE  D=80th                                                            DRAW
+D15	RECT    W=138.1th             H=98.7th                                    FLASH
+D16	CIRCLE  D=138.1th                                                         FLASH
+D17	CIRCLE  D=98.7th                                                          FLASH
 
 NC Drill Setup
 --------------
