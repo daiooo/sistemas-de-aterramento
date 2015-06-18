@@ -4,12 +4,13 @@ LABCENTER PROTEUS TOOL INFORMATION FILE
 In case of difficulty, please e-mail support@labcenter.co.uk
 
 Tool set up for Proteus layout 'potencia.pdsprj'.
-CADCAM generated at 09:13:35 on quinta-feira, 18 de junho de 2015.
+CADCAM generated at 09:40:45 on quinta-feira, 18 de junho de 2015.
 
 File List
 ---------
 Top Copper              : potencia - CADCAM Top Copper.TXT
 Bottom Copper           : potencia - CADCAM Bottom Copper.TXT
+Top Silk Screen         : potencia - CADCAM Top Silk Screen.TXT
 Top Solder Resist       : potencia - CADCAM Top Solder Resist.TXT
 Bottom Solder Resist    : potencia - CADCAM Bottom Solder Resist.TXT
 Mechanical 1            : potencia - CADCAM Mechanical 1.TXT
@@ -20,11 +21,11 @@ Photoplotter Setup
 Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
 Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer
 
-D10	CIRCLE  D=78.7th                                                          FLASH
+D10	RECT    W=118.1th             H=78.7th                                    FLASH
 D11	CIRCLE  D=118.1th                                                         FLASH
 D12	CIRCLE  D=8th                                                             DRAW
 D13	CIRCLE  D=80th                                                            DRAW
-D14	CIRCLE  D=98.7th                                                          FLASH
+D14	RECT    W=138.1th             H=98.7th                                    FLASH
 D15	CIRCLE  D=138.1th                                                         FLASH
 
 NC Drill Setup
