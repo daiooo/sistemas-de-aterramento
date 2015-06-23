@@ -25,8 +25,15 @@ except:
     # a execução do pip para instalar o "pyvisa" que requer por natureza, várias
     # dependências que são simplesmene tratadas pelo pip. Portanto para a primeira
     # utilização do programa é necessário a utilização da internet.
-    import pip
-    pip.main(['install', 'pyvisa'])
+    #
+    # Para que tudo funcione corretamente e necessario pyvisa 1.4
+    #import pip
+    #pip.main(['install', 'pyvisa'])
+
+    import subprocess
+    print u"aviso: instalando o PyVISA 1.4"
+    subprocess.call(['pip', 'install', 'PyVISA==1.4'])
+    print u"aviso: instalacao finalizada"
     import visa
 
 import matplotlib.pyplot as plt
