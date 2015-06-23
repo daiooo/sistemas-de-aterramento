@@ -4,7 +4,7 @@ LABCENTER PROTEUS TOOL INFORMATION FILE
 In case of difficulty, please e-mail support@labcenter.co.uk
 
 Tool set up for Proteus layout 'controle.pdsprj'.
-CADCAM generated at 10:18:32 on terça-feira, 16 de dezembro de 2014.
+CADCAM generated at 09:16:28 on quinta-feira, 18 de junho de 2015.
 
 File List
 ---------
@@ -12,6 +12,8 @@ Top Copper              : controle - CADCAM Top Copper.TXT
 Bottom Copper           : controle - CADCAM Bottom Copper.TXT
 Top Silk Screen         : controle - CADCAM Top Silk Screen.TXT
 Bottom Silk Screen      : controle - CADCAM Bottom Silk Screen.TXT
+Top Solder Resist       : controle - CADCAM Top Solder Resist.TXT
+Bottom Solder Resist    : controle - CADCAM Bottom Solder Resist.TXT
 Mechanical 1            : controle - CADCAM Mechanical 1.TXT
 Drill                   : controle - CADCAM Drill.TXT
 
@@ -20,28 +22,29 @@ Photoplotter Setup
 Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
 Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer
 
-D10	CIRCLE  D=1mm                                                             DRAW
-D11	CIRCLE  D=0.3mm                                                           DRAW
-D12	CIRCLE  D=3mm                                                             FLASH
-D13	CIRCLE  D=2mm                                                             FLASH
-D14	SQUARE  S=2mm                                                             FLASH
-D15	CIRCLE  D=1.5mm                                                           FLASH
-D16	SQUARE  S=2.03mm                                                          FLASH
-D17	CIRCLE  D=2.29mm                                                          FLASH
-D18	CIRCLE  D=0.2mm                                                           DRAW
-D19	CIRCLE  D=1.02mm                                                          DRAW
-D70	CIRCLE  D=0.76mm                                                          DRAW
-D71	CIRCLE  D=0.64mm                                                          DRAW
-D20	CIRCLE  D=0.51mm                                                          DRAW
-D21	CIRCLE  D=0.0635mm                                                        DRAW
+D10	CIRCLE  D=39.3th                                                          DRAW
+D11	CIRCLE  D=12th                                                            DRAW
+D12	CIRCLE  D=118.1th                                                         FLASH
+D13	CIRCLE  D=78.7th                                                          FLASH
+D14	SQUARE  S=78.7th                                                          FLASH
+D15	CIRCLE  D=59th                                                            FLASH
+D16	CIRCLE  D=8th                                                             DRAW
+D17	CIRCLE  D=40th                                                            DRAW
+D18	CIRCLE  D=30th                                                            DRAW
+D19	CIRCLE  D=25th                                                            DRAW
+D70	CIRCLE  D=20th                                                            DRAW
+D71	CIRCLE  D=2.5th                                                           DRAW
+D20	CIRCLE  D=138.1th                                                         FLASH
+D21	CIRCLE  D=98.7th                                                          FLASH
+D22	SQUARE  S=98.7th                                                          FLASH
+D23	CIRCLE  D=79th                                                            FLASH
 
 NC Drill Setup
 --------------
 Format: ASCII, 2.4, imperial, absolute, eob=<CR><LF>, no zero suppression.
 Notes:  Tool sizes are diameters. Layer sets are in brackets - 0=TOP, 15=BOTTOM, 1-14=INNER.
 
-T01	1mm (0-15)
-T02	1.02mm (0-15)
+T01	39.3th (0-15)
 
 
 [END OF FILE]
