@@ -1,0 +1,7 @@
+LEGENDA:
+    Top and bottom copper (.GTL, .GBL)
+    Top and bottom solder mask (.GTS, .GBS)
+    Top and bottom silkscreen (.GTO, .GBO)
+    Drill file, 2.4 leading (.TXT)
+	MILL and Dimension (.GML)
+

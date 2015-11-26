@@ -1,0 +1,16 @@
+#! /bin/sh
+#
+# Felipe Bandeira
+# 26 nov. 2015
+#
+# Gera uma versão simples dos gerber
+
+PROJETO="placa_potencia"
+
+cd ./gerb
+mkdir -p simples
+
+cp $PROJETO".GTL" ./simples/$PROJETO".GTL"
+cp $PROJETO".GBL" ./simples/$PROJETO".GBL"
+cp $PROJETO".TXT" ./simples/$PROJETO".TXT"
+cp $PROJETO".GML" ./simples/$PROJETO".GML"
